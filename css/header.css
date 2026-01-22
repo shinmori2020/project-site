@@ -1,0 +1,160 @@
+/* ========================================
+   Header
+   ======================================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-md);
+  z-index: 1000;
+  transition: transform var(--transition-normal), opacity var(--transition-normal);
+  /* Initially hidden - slides up */
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+/* Show header when scrolled */
+.header.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.header__inner {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 80px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ========================================
+   Logo
+   ======================================== */
+.header__logo a {
+  display: block;
+}
+
+.header__logo img {
+  height: 45px;
+  width: auto;
+}
+
+/* ========================================
+   Header Right (Nav + CTA)
+   ======================================== */
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+/* ========================================
+   Navigation
+   ======================================== */
+.header__nav-list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header__nav-item {
+  position: relative;
+}
+
+.header__nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 8px 16px;
+  text-align: center;
+  transition: color var(--transition-fast);
+}
+
+.header__nav-link:hover {
+  color: var(--primary-color);
+}
+
+.header__nav-link:hover .header__nav-icon {
+  color: var(--primary-color);
+}
+
+.header__nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  transition: color var(--transition-fast);
+}
+
+.header__nav-text {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.header__nav-link:hover .header__nav-text {
+  color: var(--primary-color);
+}
+
+/* ========================================
+   CTA Buttons
+   ======================================== */
+.header__cta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn--header {
+  padding: 12px 24px;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+/* ========================================
+   Dropdown
+   ======================================== */
+.header__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  min-width: 200px;
+  background: var(--white);
+  box-shadow: var(--shadow-lg);
+  border-radius: 8px;
+  padding: 8px 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-fast);
+  z-index: 100;
+}
+
+.header__nav-item.has-dropdown:hover .header__dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.header__dropdown li a {
+  display: block;
+  padding: 12px 20px;
+  font-size: 14px;
+  color: var(--text-primary);
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.header__dropdown li a:hover {
+  background: var(--primary-light);
+  color: var(--primary-color);
+}

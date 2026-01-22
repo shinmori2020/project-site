@@ -1,0 +1,194 @@
+/* ========================================
+   Hamburger Button
+   ======================================== */
+.hamburger {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  z-index: 1001;
+}
+
+.hamburger__line {
+  position: absolute;
+  left: 8px;
+  width: 28px;
+  height: 2px;
+  background: var(--primary-color);
+  border-radius: 2px;
+  transition: all var(--transition-normal);
+}
+
+.hamburger__line:nth-child(1) { top: 13px; }
+.hamburger__line:nth-child(2) { top: 21px; }
+.hamburger__line:nth-child(3) { top: 29px; }
+
+/* Active State */
+.hamburger.active .hamburger__line:nth-child(1) {
+  top: 21px;
+  transform: rotate(45deg);
+}
+
+.hamburger.active .hamburger__line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .hamburger__line:nth-child(3) {
+  top: 21px;
+  transform: rotate(-45deg);
+}
+
+/* ========================================
+   Side Menu
+   ======================================== */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999;
+}
+
+.side-menu.active {
+  pointer-events: auto;
+}
+
+/* Overlay */
+.side-menu__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.side-menu.active .side-menu__overlay {
+  opacity: 1;
+}
+
+/* Content */
+.side-menu__content {
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 85%;
+  max-width: 340px;
+  height: 100%;
+  background: var(--white);
+  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15);
+  overflow-y: auto;
+  transition: right var(--transition-normal);
+}
+
+.side-menu.active .side-menu__content {
+  right: 0;
+}
+
+/* Close Button */
+.side-menu__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  transition: color var(--transition-fast);
+}
+
+.side-menu__close:hover {
+  color: var(--primary-color);
+}
+
+/* Logo */
+.side-menu__logo {
+  padding: 24px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.side-menu__logo img {
+  height: 40px;
+  width: auto;
+}
+
+/* Navigation */
+.side-menu__nav {
+  padding: 0 0 24px;
+}
+
+.side-menu__list {
+  border-bottom: 1px solid var(--border-light);
+}
+
+.side-menu__item {
+  border-top: 1px solid var(--border-light);
+}
+
+.side-menu__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 18px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-align: left;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.side-menu__link:hover {
+  background: var(--primary-light);
+  color: var(--primary-color);
+}
+
+/* Arrow */
+.side-menu__arrow {
+  display: flex;
+  transition: transform var(--transition-normal);
+}
+
+.side-menu__toggle.active .side-menu__arrow {
+  transform: rotate(180deg);
+}
+
+/* Submenu */
+.side-menu__submenu {
+  max-height: 0;
+  overflow: hidden;
+  background: var(--bg-secondary);
+  transition: max-height var(--transition-normal);
+}
+
+.side-menu__item.active .side-menu__submenu {
+  max-height: 300px;
+}
+
+.side-menu__submenu li a {
+  display: block;
+  padding: 14px 24px 14px 40px;
+  font-size: 15px;
+  color: var(--text-secondary);
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.side-menu__submenu li a:hover {
+  background: var(--white);
+  color: var(--primary-color);
+}
+
+/* CTA */
+.side-menu__cta {
+  padding: 24px;
+}
+
+/* Body Scroll Lock */
+body.menu-open {
+  overflow: hidden;
+}

@@ -1,0 +1,51 @@
+/* ========================================
+   CSS Variables
+   ======================================== */
+:root {
+  /* メインカラー（青系） */
+  --primary-color: #0066CC;
+  --primary-hover: #0052A3;
+  --primary-light: #E6F2FF;
+
+  /* サブカラー */
+  --secondary-color: #00A0E9;
+
+  /* アクセントカラー */
+  --accent-color: #FF6B35;
+
+  /* ベースカラー */
+  --white: #FFFFFF;
+  --black: #000000;
+
+  /* テキスト */
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-light: #999999;
+  --text-white: #FFFFFF;
+
+  /* 背景 */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F8F9FA;
+  --bg-dark: #1a2a3a;
+
+  /* ボーダー */
+  --border-color: #E0E0E0;
+  --border-light: #F0F0F0;
+
+  /* シャドウ */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+  /* コンテナ */
+  --container-max-width: 1200px;
+  --container-padding: 40px;
+
+  /* ヘッダー高さ */
+  --header-height: 80px;
+
+  /* トランジション */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}

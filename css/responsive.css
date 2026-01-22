@@ -1,0 +1,293 @@
+/* ========================================
+   Responsive Styles
+   ======================================== */
+
+/* ========================================
+   Tablet (max-width: 1023px)
+   ======================================== */
+@media (max-width: 1023px) {
+  :root {
+    --container-padding: 24px;
+    --header-height: 70px;
+  }
+
+  .pc-only {
+    display: none !important;
+  }
+
+  .sp-only {
+    display: block;
+  }
+
+  .section {
+    padding: 80px 0;
+  }
+
+  .section__title {
+    font-size: 30px;
+  }
+
+  /* Header */
+  .header__inner {
+    padding: 0 20px;
+  }
+
+  .header__logo img {
+    height: 40px;
+  }
+
+  /* Hero - Full width 2 Column to Stack */
+  .hero {
+    padding: 30px 0 50px;
+  }
+
+  .hero__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 24px;
+  }
+
+  .hero__left {
+    order: 1;
+  }
+
+  .hero__right {
+    order: 0;
+  }
+
+  .hero__logo {
+    display: none;
+  }
+
+  .hero__business-tag {
+    display: none;
+  }
+
+  .hero__title {
+    font-size: 38px;
+  }
+
+  .hero__subtitle {
+    font-size: 16px;
+  }
+
+  .hero__nav-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .hero__nav-link {
+    padding: 20px 12px;
+  }
+
+  .hero__nav-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .hero__nav-text {
+    font-size: 13px;
+  }
+
+  .hero__image-placeholder {
+    min-height: 300px;
+  }
+
+  .hero__cta {
+    flex-direction: row;
+  }
+
+  .hero__cta .btn {
+    padding: 14px 16px;
+    font-size: 13px;
+  }
+
+  .hero__scroll {
+    display: none;
+  }
+
+  /* Services */
+  .services__grid {
+    gap: 30px;
+  }
+
+  .service-card {
+    padding: 36px 28px;
+  }
+
+  /* Contact */
+  .contact__content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  /* Footer */
+  .footer__top {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer__nav {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+/* ========================================
+   Mobile (max-width: 767px)
+   ======================================== */
+@media (max-width: 767px) {
+  :root {
+    --container-padding: 20px;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .section__header {
+    margin-bottom: 40px;
+  }
+
+  .section__title {
+    font-size: 26px;
+  }
+
+  .section__subtitle {
+    font-size: 15px;
+  }
+
+  /* Hero */
+  .hero {
+    min-height: auto;
+    padding: 20px 0 40px;
+  }
+
+  .hero__inner {
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .hero__copy {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .hero__title {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .hero__subtitle {
+    font-size: 14px;
+  }
+
+  .hero__nav-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .hero__nav-link {
+    padding: 16px 10px;
+    gap: 8px;
+  }
+
+  .hero__nav-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .hero__nav-text {
+    font-size: 12px;
+  }
+
+  .hero__image-placeholder {
+    min-height: 220px;
+    border-radius: 12px;
+  }
+
+  .hero__cta {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero__cta .btn {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 14px;
+  }
+
+  /* Services */
+  .services__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .service-card {
+    padding: 32px 24px;
+  }
+
+  .service-card__icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 20px;
+  }
+
+  .service-card__title {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .service-card__text {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  /* Contact */
+  .contact__form-area {
+    padding: 24px;
+  }
+
+  .contact__placeholder {
+    padding: 40px 16px;
+  }
+
+  .contact__info-item {
+    padding: 20px;
+  }
+
+  .contact__info-value {
+    font-size: 16px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 40px 0 24px;
+  }
+
+  .footer__nav {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .footer__bottom {
+    padding-top: 24px;
+  }
+}
+
+/* ========================================
+   Reduced Motion
+   ======================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
