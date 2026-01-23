@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Synalis Groupの会社概要ページです。企業理念、会社情報、沿革などをご紹介します。">
+  <title>会社概要 | Synalis Group</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="../images/favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/hamburger.css">
+  <link rel="stylesheet" href="../css/about.css">
+  <!-- responsive.css must be loaded last to override base styles -->
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header class="header header--visible" id="header">
+    <div class="header__inner">
+      <!-- ロゴ -->
+      <div class="header__logo">
+        <a href="/">
+          <img src="../images/logo.svg" alt="Synalis Group" width="180" height="50">
+        </a>
+      </div>
+
+      <!-- 右側: ナビ + CTA -->
+      <div class="header__right pc-only">
+        <!-- PC用ナビゲーション -->
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item has-dropdown">
+              <a href="/research/" class="header__nav-link">
+                <span class="header__nav-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="11" cy="11" r="8"/>
+                    <path d="M21 21l-4.35-4.35"/>
+                    <path d="M11 8v6M8 11h6"/>
+                  </svg>
+                </span>
+                <span class="header__nav-text">研究支援事業</span>
+              </a>
+              <ul class="header__dropdown">
+                <li><a href="/research/service/">サービス内容・費用</a></li>
+                <li><a href="/research/case/">事例紹介</a></li>
+              </ul>
+            </li>
+            <li class="header__nav-item has-dropdown">
+              <a href="/recruitment/" class="header__nav-link">
+                <span class="header__nav-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                  </svg>
+                </span>
+                <span class="header__nav-text">人材紹介事業</span>
+              </a>
+              <ul class="header__dropdown">
+                <li><a href="/recruitment/service/">サービス内容</a></li>
+                <li><a href="/recruitment/jobs/">求人検索</a></li>
+                <li><a href="/recruitment/news/">トピックス</a></li>
+              </ul>
+            </li>
+            <li class="header__nav-item">
+              <a href="/about/" class="header__nav-link header__nav-link--active">
+                <span class="header__nav-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9 22 9 12 15 12 15 22"/>
+                  </svg>
+                </span>
+                <span class="header__nav-text">会社概要</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- CTAボタン -->
+        <div class="header__cta">
+          <a href="/#contact" class="btn btn--primary btn--header">お問い合わせ</a>
+          <a href="tel:000-0000-0000" class="btn btn--dark btn--header">
+            <span class="btn__icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </span>
+            000-0000-0000
+          </a>
+        </div>
+      </div>
+
+      <!-- ハンバーガーボタン（SP） -->
+      <button class="hamburger sp-only" id="hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="sideMenu">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- サイドメニュー（SP） -->
+  <div class="side-menu" id="sideMenu" aria-hidden="true">
+    <!-- オーバーレイ -->
+    <div class="side-menu__overlay" id="sideMenuOverlay"></div>
+
+    <!-- メニュー本体 -->
+    <div class="side-menu__content">
+      <!-- 閉じるボタン -->
+      <button class="side-menu__close" id="sideMenuClose" aria-label="メニューを閉じる">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- ロゴ -->
+      <div class="side-menu__logo">
+        <a href="/">
+          <img src="../images/logo.svg" alt="Synalis Group" width="160" height="48">
+        </a>
+      </div>
+
+      <!-- ナビゲーション -->
+      <nav class="side-menu__nav">
+        <ul class="side-menu__list">
+          <li class="side-menu__item">
+            <a href="/" class="side-menu__link">TOP</a>
+          </li>
+          <li class="side-menu__item has-children">
+            <button class="side-menu__link side-menu__toggle" aria-expanded="false">
+              研究支援事業
+              <span class="side-menu__arrow">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 4.5L6 7.5L9 4.5"/>
+                </svg>
+              </span>
+            </button>
+            <ul class="side-menu__submenu">
+              <li><a href="/research/">研究支援事業トップ</a></li>
+              <li><a href="/research/service/">サービス内容・費用</a></li>
+              <li><a href="/research/case/">事例紹介</a></li>
+            </ul>
+          </li>
+          <li class="side-menu__item has-children">
+            <button class="side-menu__link side-menu__toggle" aria-expanded="false">
+              人材紹介事業
+              <span class="side-menu__arrow">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 4.5L6 7.5L9 4.5"/>
+                </svg>
+              </span>
+            </button>
+            <ul class="side-menu__submenu">
+              <li><a href="/recruitment/">人材紹介事業トップ</a></li>
+              <li><a href="/recruitment/service/">サービス内容</a></li>
+              <li><a href="/recruitment/jobs/">求人検索</a></li>
+              <li><a href="/recruitment/news/">トピックス</a></li>
+            </ul>
+          </li>
+          <li class="side-menu__item">
+            <a href="/about/" class="side-menu__link side-menu__link--active">会社概要</a>
+          </li>
+        </ul>
+
+        <!-- CTAボタン -->
+        <div class="side-menu__cta">
+          <a href="/#contact" class="btn btn--primary btn--block">お問い合わせ</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <main class="main">
+    <!-- ページヘッダー（ヒーローエリア） -->
+    <section class="page-hero">
+      <div class="page-hero__inner">
+        <!-- 見出し + パンくず（同じ行） -->
+        <div class="page-hero__header-row">
+          <div class="page-hero__content">
+            <h1 class="page-hero__title">会社案内</h1>
+            <p class="page-hero__label">ABOUT US</p>
+          </div>
+          <nav class="page-hero__breadcrumb" aria-label="パンくずリスト">
+            <ol class="page-hero__breadcrumb-list">
+              <li class="page-hero__breadcrumb-item">
+                <a href="/" class="page-hero__breadcrumb-link">TOP</a>
+              </li>
+              <li class="page-hero__breadcrumb-item">
+                <span class="page-hero__breadcrumb-separator">ー</span>
+              </li>
+              <li class="page-hero__breadcrumb-item">
+                <span class="page-hero__breadcrumb-current">会社案内</span>
+              </li>
+            </ol>
+          </nav>
+        </div>
+
+        <!-- メインビジュアル -->
+        <div class="page-hero__image">
+          <div class="page-hero__image-placeholder">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+              <circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            <span>メインビジュアル</span>
+          </div>
+        </div>
+
+        <!-- ページ内リンク（左下） -->
+        <nav class="page-hero__nav">
+          <ul class="page-hero__nav-list">
+            <li class="page-hero__nav-item">
+              <a href="#philosophy" class="page-hero__nav-link">
+                <span class="page-hero__nav-text">理念・方針</span>
+                <span class="page-hero__nav-arrow">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M5 12l7 7 7-7"/>
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li class="page-hero__nav-item">
+              <a href="#features" class="page-hero__nav-link">
+                <span class="page-hero__nav-text">企業の特徴</span>
+                <span class="page-hero__nav-arrow">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M5 12l7 7 7-7"/>
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li class="page-hero__nav-item">
+              <a href="#greeting" class="page-hero__nav-link">
+                <span class="page-hero__nav-text">ごあいさつ</span>
+                <span class="page-hero__nav-arrow">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M5 12l7 7 7-7"/>
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li class="page-hero__nav-item">
+              <a href="#company-info" class="page-hero__nav-link">
+                <span class="page-hero__nav-text">会社概要</span>
+                <span class="page-hero__nav-arrow">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M5 12l7 7 7-7"/>
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li class="page-hero__nav-item">
+              <a href="#history" class="page-hero__nav-link">
+                <span class="page-hero__nav-text">沿革</span>
+                <span class="page-hero__nav-arrow">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M5 12l7 7 7-7"/>
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li class="page-hero__nav-item">
+              <a href="#access" class="page-hero__nav-link">
+                <span class="page-hero__nav-text">アクセス</span>
+                <span class="page-hero__nav-arrow">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M5 12l7 7 7-7"/>
+                  </svg>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <!-- 理念・方針セクション -->
+    <section class="philosophy" id="philosophy">
+      <div class="philosophy__inner">
+        <div class="philosophy__layout">
+          <!-- 左側: セクションタイトル -->
+          <div class="philosophy__left">
+            <div class="philosophy__title-group">
+              <div class="philosophy__icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 2L12 6M12 18L12 22M4.93 4.93L7.76 7.76M16.24 16.24L19.07 19.07M2 12L6 12M18 12L22 12M4.93 19.07L7.76 16.24M16.24 7.76L19.07 4.93"/>
+                  <circle cx="12" cy="12" r="4"/>
+                </svg>
+              </div>
+              <h2 class="philosophy__title">経営理念</h2>
+              <p class="philosophy__label">PHILOSOPHY</p>
+            </div>
+          </div>
+
+          <!-- 右側: 経営理念カード -->
+          <div class="philosophy__right">
+            <h3 class="philosophy__subtitle">
+              <span class="philosophy__subtitle-dot">●</span>
+              3つの経営理念
+            </h3>
+            <div class="philosophy__cards">
+              <div class="philosophy__card">
+                <div class="philosophy__card-number">1</div>
+                <div class="philosophy__card-content">
+                  <p class="philosophy__card-text">
+                    常に最新の知識と技術を学び、専門性の高いサービスを提供します。お客様の課題に対して、最適なソリューションを見つけ出します。
+                  </p>
+                </div>
+              </div>
+              <div class="philosophy__card">
+                <div class="philosophy__card-number">2</div>
+                <div class="philosophy__card-content">
+                  <p class="philosophy__card-text">
+                    お客様との信頼関係を大切にし、誠実な対応を心がけます。長期的なパートナーシップを築き、共に成長していきます。
+                  </p>
+                </div>
+              </div>
+              <div class="philosophy__card">
+                <div class="philosophy__card-number">3</div>
+                <div class="philosophy__card-content">
+                  <p class="philosophy__card-text">
+                    現状に満足せず、常に新しい価値の創造に挑戦します。変化を恐れず、革新的なアプローチでお客様のニーズに応えます。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 企業の特徴セクション -->
+    <section class="features" id="features">
+      <div class="features__inner">
+        <!-- セクションヘッダー -->
+        <div class="features__header">
+          <div class="features__accent-line"></div>
+          <h2 class="features__title">企業の特徴</h2>
+        </div>
+
+        <!-- キャッチコピー + 説明文 -->
+        <div class="features__intro">
+          <div class="features__catch">
+            <p>お客様と共に歩む<br>信頼のパートナー。</p>
+          </div>
+          <div class="features__description">
+            <p>
+              研究支援と人材紹介の2つの事業を通じて、お客様のビジネスを幅広くサポート。一社一社のニーズに丁寧に向き合い、最適なソリューションを提案します。
+            </p>
+          </div>
+        </div>
+
+        <!-- 特徴カード（番号付き） -->
+        <div class="features__list">
+          <div class="features__item features__item--with-images">
+            <div class="features__item-number">1</div>
+            <div class="features__item-content">
+              <h3 class="features__item-title">研究支援において高い専門性があります</h3>
+              <p class="features__item-text">
+                研究支援の専門家として、豊富な知識と経験を活かしたサービスを提供します。複雑な課題に対しても、一つひとつ丁寧に向き合い、最適なアプローチをご提案することが可能です。また、最新の技術や研究成果を取り入れ、常に質の高いサポートを追求しています。
+              </p>
+              <!-- 画像エリア -->
+              <div class="features__item-images">
+                <div class="features__item-image">
+                  <div class="features__item-image-placeholder">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                      <circle cx="8.5" cy="8.5" r="1.5"/>
+                      <polyline points="21 15 16 10 5 21"/>
+                    </svg>
+                    <span>画像1</span>
+                  </div>
+                </div>
+                <div class="features__item-image">
+                  <div class="features__item-image-placeholder">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                      <circle cx="8.5" cy="8.5" r="1.5"/>
+                      <polyline points="21 15 16 10 5 21"/>
+                    </svg>
+                    <span>画像2</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="features__item">
+            <div class="features__item-number">2</div>
+            <div class="features__item-content">
+              <h3 class="features__item-title">お客様に寄り添った丁寧なサポート</h3>
+              <p class="features__item-text">
+                お客様一社一社のニーズに真摯に向き合い、最適なソリューションを提案します。密なコミュニケーションを大切にし、課題解決まで責任を持ってサポートいたします。
+              </p>
+            </div>
+          </div>
+
+          <div class="features__item">
+            <div class="features__item-number">3</div>
+            <div class="features__item-content">
+              <h3 class="features__item-title">幅広いネットワークとの連携</h3>
+              <p class="features__item-text">
+                研究機関や企業との幅広いネットワークを活かし、最適な人材マッチングや研究支援を実現します。お客様のご要望に応じて、柔軟な対応が可能です。
+              </p>
+            </div>
+          </div>
+
+          <div class="features__item features__item--with-supplement">
+            <div class="features__item-number">4</div>
+            <div class="features__item-content">
+              <h3 class="features__item-title">ワンストップでのサービス提供</h3>
+              <p class="features__item-text">
+                研究支援から人材紹介まで、お客様のビジネスに必要なサービスをワンストップで提供。複数の課題を抱えるお客様も、一つの窓口で効率的にサポートいたします。
+              </p>
+              <!-- 補足ボックス -->
+              <div class="features__item-supplement">
+                <h4 class="features__item-supplement-title">
+                  <span class="features__item-supplement-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                      <polyline points="22 4 12 14.01 9 11.01"/>
+                    </svg>
+                  </span>
+                  ワンストップサービスのメリット
+                </h4>
+                <ul class="features__item-supplement-list">
+                  <li class="features__item-supplement-item">窓口が一つで手続きがスムーズ</li>
+                  <li class="features__item-supplement-item">担当者が一貫して対応</li>
+                  <li class="features__item-supplement-item">時間と手間を大幅に削減</li>
+                  <li class="features__item-supplement-item">ビジネス全体を理解した提案が可能</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ごあいさつセクション -->
+    <section class="greeting" id="greeting">
+      <div class="greeting__inner">
+        <div class="greeting__header">
+          <span class="section-label">GREETING</span>
+          <h2 class="section-title">ごあいさつ</h2>
+        </div>
+        <div class="greeting__content">
+          <div class="greeting__image">
+            <div class="greeting__image-placeholder">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+              <span>代表写真</span>
+            </div>
+          </div>
+          <div class="greeting__text">
+            <p class="greeting__position">代表取締役</p>
+            <p class="greeting__name">鈴木 凌</p>
+            <div class="greeting__message">
+              <p>
+                当社のWebサイトをご覧いただき、誠にありがとうございます。
+              </p>
+              <p>
+                Synalis Groupは、「研究と人材をつなぎ、未来を創造する」という理念のもと、
+                研究支援事業と人材紹介事業を通じて、企業と研究機関の発展に貢献してまいりました。
+              </p>
+              <p>
+                私たちは、お客様一人ひとりのニーズに寄り添い、
+                最適なソリューションを提供することで、
+                ビジネスの成長と社会の発展に寄与することを使命としています。
+              </p>
+              <p>
+                専門性の高いチームと豊富な経験を活かし、
+                お客様の期待を超えるサービスをお届けできるよう、
+                日々努力を重ねてまいります。
+              </p>
+              <p>
+                今後とも、Synalis Groupをよろしくお願いいたします。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 会社概要セクション -->
+    <section class="company-info" id="company-info">
+      <div class="company-info__inner">
+        <div class="company-info__header">
+          <span class="section-label">COMPANY</span>
+          <h2 class="section-title">会社概要</h2>
+        </div>
+        <div class="company-info__content">
+          <table class="company-info__table">
+            <tbody>
+              <tr>
+                <th>会社名</th>
+                <td>Synalis Group（シナリスグループ）</td>
+              </tr>
+              <tr>
+                <th>代表者</th>
+                <td>代表取締役 鈴木 凌</td>
+              </tr>
+              <tr>
+                <th>設立</th>
+                <td>20XX年X月X日</td>
+              </tr>
+              <tr>
+                <th>資本金</th>
+                <td>X,XXX万円</td>
+              </tr>
+              <tr>
+                <th>従業員数</th>
+                <td>XX名（20XX年X月現在）</td>
+              </tr>
+              <tr>
+                <th>所在地</th>
+                <td>
+                  〒000-0000<br>
+                  所在地（確認中）
+                </td>
+              </tr>
+              <tr>
+                <th>電話番号</th>
+                <td><a href="tel:000-0000-0000">000-0000-0000</a></td>
+              </tr>
+              <tr>
+                <th>事業内容</th>
+                <td>
+                  <ul class="company-info__business-list">
+                    <li>研究支援事業</li>
+                    <li>人材紹介事業</li>
+                    <li>コンサルティング事業</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 沿革セクション -->
+    <section class="history" id="history">
+      <div class="history__inner">
+        <div class="history__header">
+          <span class="section-label">HISTORY</span>
+          <h2 class="section-title">沿革</h2>
+        </div>
+        <div class="history__content">
+          <table class="history__table">
+            <tbody>
+              <tr>
+                <th>20XX年X月</th>
+                <td>会社設立</td>
+              </tr>
+              <tr>
+                <th>20XX年X月</th>
+                <td>研究支援事業を開始</td>
+              </tr>
+              <tr>
+                <th>20XX年X月</th>
+                <td>人材紹介事業を開始<br>有料職業紹介事業許可取得</td>
+              </tr>
+              <tr>
+                <th>20XX年X月</th>
+                <td>本社移転</td>
+              </tr>
+              <tr>
+                <th>20XX年X月</th>
+                <td>コンサルティング事業を開始</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- アクセスセクション -->
+    <section class="access" id="access">
+      <div class="access__inner">
+        <div class="access__header">
+          <span class="section-label">ACCESS</span>
+          <h2 class="section-title">アクセス</h2>
+        </div>
+        <div class="access__content">
+          <div class="access__info">
+            <div class="access__address">
+              <h3 class="access__office-name">本社</h3>
+              <p class="access__address-text">
+                〒000-0000<br>
+                所在地（確認中）
+              </p>
+              <p class="access__tel">
+                TEL: <a href="tel:000-0000-0000">000-0000-0000</a>
+              </p>
+            </div>
+            <div class="access__route">
+              <h4 class="access__route-title">交通アクセス</h4>
+              <ul class="access__route-list">
+                <li>○○線「○○駅」より徒歩○分</li>
+                <li>○○線「○○駅」より徒歩○分</li>
+              </ul>
+            </div>
+          </div>
+          <div class="access__map">
+            <!-- Google Mapを埋め込む場所 -->
+            <div class="access__map-placeholder">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <p>Google Map</p>
+              <span>住所確定後に地図を表示</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTAセクション -->
+    <section class="page-cta">
+      <div class="page-cta__inner">
+        <h2 class="page-cta__title">お気軽にお問い合わせください</h2>
+        <p class="page-cta__text">サービスに関するご質問やご相談など、お気軽にお問い合わせください。</p>
+        <div class="page-cta__buttons">
+          <a href="/#contact" class="btn btn--primary btn--lg">
+            お問い合わせ
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="tel:000-0000-0000" class="btn btn--outline btn--lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            000-0000-0000
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__top">
+        <!-- 左側: 会社情報 -->
+        <div class="footer__info">
+          <!-- ロゴ + 会社名 -->
+          <div class="footer__brand">
+            <div class="footer__logo">
+              <div class="footer__logo-placeholder">
+                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                  <circle cx="8.5" cy="8.5" r="1.5"/>
+                  <polyline points="21 15 16 10 5 21"/>
+                </svg>
+              </div>
+            </div>
+            <div class="footer__company">
+              <h2 class="footer__company-name">Synalis Group</h2>
+              <p class="footer__company-name-en">SYNALIS GROUP</p>
+            </div>
+          </div>
+
+          <!-- サービスタグ -->
+          <div class="footer__tags">
+            <span class="footer__tag">研究支援</span>
+            <span class="footer__tag">人材紹介</span>
+            <span class="footer__tag">コンサルティング</span>
+          </div>
+
+          <!-- 住所 -->
+          <address class="footer__address">
+            <p class="footer__address-postal">〒000-0000 所在地（確認中）</p>
+          </address>
+
+          <!-- CTAボタン（ヘッダーと同じスタイル） -->
+          <div class="footer__cta">
+            <a href="/#contact" class="footer__cta-btn footer__cta-btn--primary">
+              お問い合わせ
+            </a>
+            <a href="tel:000-0000-0000" class="footer__cta-btn footer__cta-btn--tel">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              000-0000-0000
+            </a>
+          </div>
+        </div>
+
+        <!-- 右側: ナビゲーション -->
+        <nav class="footer__nav">
+          <!-- 左列: ホーム・会社概要・お問い合わせ -->
+          <div class="footer__nav-col footer__nav-col--links">
+            <a href="/" class="footer__nav-link">ホーム</a>
+            <a href="/about/" class="footer__nav-link">会社概要</a>
+            <a href="/#contact" class="footer__nav-link">お問い合わせ</a>
+          </div>
+
+          <!-- 中央列: 研究支援事業 -->
+          <div class="footer__nav-col">
+            <a href="/research/" class="footer__nav-title-link">研究支援事業</a>
+            <ul class="footer__nav-list">
+              <li><a href="/research/service/">サービス内容・費用</a></li>
+              <li><a href="/research/case/">事例紹介</a></li>
+            </ul>
+          </div>
+
+          <!-- 右列: 人材紹介事業 -->
+          <div class="footer__nav-col">
+            <a href="/recruitment/" class="footer__nav-title-link">人材紹介事業</a>
+            <ul class="footer__nav-list">
+              <li><a href="/recruitment/service/">サービス内容</a></li>
+              <li><a href="/recruitment/jobs/">求人検索</a></li>
+              <li><a href="/recruitment/news/">トピックス</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <!-- コピーライト -->
+      <div class="footer__bottom">
+        <p class="footer__copyright">
+          &copy; 2026 Synalis Group. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="../js/common.js"></script>
+  <script src="../js/hamburger.js"></script>
+</body>
+</html>
