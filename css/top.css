@@ -463,35 +463,6 @@
   color: var(--text-primary);
 }
 
-/* About Background */
-.about__bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.about__bg-leaf {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(circle, rgba(0, 102, 204, 0.04) 0%, transparent 70%);
-  border-radius: 50%;
-}
-
-.about__bg-leaf--left {
-  bottom: 0;
-  left: -50px;
-}
-
-.about__bg-leaf--right {
-  bottom: 100px;
-  right: -50px;
-}
-
 /* ========================================
    Contact Section
    ======================================== */
@@ -673,6 +644,8 @@
 .feature__header {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   margin-bottom: 60px;
 }
 
@@ -798,31 +771,6 @@
 .feature__cta-link--outline:hover {
   background: var(--primary-color);
   color: var(--white);
-}
-
-/* Feature Background */
-.feature__bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.feature__bg-leaf {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(0, 102, 204, 0.03) 0%, transparent 70%);
-  border-radius: 50%;
-}
-
-.feature__bg-leaf--right {
-  top: 50%;
-  right: -100px;
-  transform: translateY(-50%);
 }
 
 /* ========================================
@@ -979,29 +927,4 @@
 
 .service-info-card:hover .service-info-card__arrow {
   transform: translateX(4px);
-}
-
-/* Service Info Background */
-.service-info__bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.service-info__bg-leaf {
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(0, 102, 204, 0.03) 0%, transparent 70%);
-  border-radius: 50%;
-}
-
-.service-info__bg-leaf--left {
-  top: 50%;
-  left: -150px;
-  transform: translateY(-50%);
 }

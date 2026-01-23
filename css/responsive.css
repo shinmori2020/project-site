@@ -342,10 +342,6 @@
     display: none;
   }
 
-  .about__bg {
-    order: 5;
-  }
-
   /* Feature */
   .feature {
     padding: 60px 0 80px;
