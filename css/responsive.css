@@ -134,19 +134,6 @@
     padding: 0 24px;
   }
 
-  .service-info__left {
-    text-align: center;
-    align-items: center;
-  }
-
-  .service-info__header {
-    text-align: center;
-  }
-
-  .service-info__text {
-    text-align: center;
-  }
-
   .service-info__btn {
     max-width: 100%;
     width: 280px;
