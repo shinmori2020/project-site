@@ -138,14 +138,30 @@
       <nav class="side-menu__nav">
         <ul class="side-menu__list">
           <li class="side-menu__item">
-            <a href="/" class="side-menu__link">TOP</a>
+            <a href="/" class="side-menu__link">
+              <span class="side-menu__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <polyline points="22 12 12 2 2 12"/>
+                  <path d="M2 12v10h20V12"/>
+                </svg>
+              </span>
+              <span class="side-menu__text">TOP</span>
+            </a>
           </li>
           <li class="side-menu__item has-children">
             <button class="side-menu__link side-menu__toggle" aria-expanded="false">
-              研究支援事業
+              <span class="side-menu__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="11" cy="11" r="8"/>
+                  <path d="M21 21l-4.35-4.35"/>
+                  <path d="M11 8v6M8 11h6"/>
+                </svg>
+              </span>
+              <span class="side-menu__text">研究支援事業</span>
               <span class="side-menu__arrow">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M3 4.5L6 7.5L9 4.5"/>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="5" x2="12" y2="19"/>
+                  <line x1="5" y1="12" x2="19" y2="12"/>
                 </svg>
               </span>
             </button>
@@ -157,10 +173,19 @@
           </li>
           <li class="side-menu__item has-children">
             <button class="side-menu__link side-menu__toggle" aria-expanded="false">
-              人材紹介事業
+              <span class="side-menu__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </span>
+              <span class="side-menu__text">人材紹介事業</span>
               <span class="side-menu__arrow">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M3 4.5L6 7.5L9 4.5"/>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="5" x2="12" y2="19"/>
+                  <line x1="5" y1="12" x2="19" y2="12"/>
                 </svg>
               </span>
             </button>
@@ -172,13 +197,27 @@
             </ul>
           </li>
           <li class="side-menu__item">
-            <a href="/about/" class="side-menu__link side-menu__link--active">会社概要</a>
+            <a href="/about/" class="side-menu__link side-menu__link--active">
+              <span class="side-menu__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                  <polyline points="9 22 9 12 15 12 15 22"/>
+                </svg>
+              </span>
+              <span class="side-menu__text">会社概要</span>
+            </a>
           </li>
         </ul>
 
         <!-- CTAボタン -->
         <div class="side-menu__cta">
-          <a href="/#contact" class="btn btn--primary btn--block">お問い合わせ</a>
+          <a href="/#contact" class="btn btn--primary btn--block">WEB予約</a>
+          <a href="tel:076-232-0001" class="btn btn--dark btn--block">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            076-232-0001
+          </a>
         </div>
       </nav>
     </div>
@@ -299,8 +338,9 @@
             <div class="philosophy__title-group">
               <div class="philosophy__icon">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M12 2L12 6M12 18L12 22M4.93 4.93L7.76 7.76M16.24 16.24L19.07 19.07M2 12L6 12M18 12L22 12M4.93 19.07L7.76 16.24M16.24 7.76L19.07 4.93"/>
-                  <circle cx="12" cy="12" r="4"/>
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                  <path d="M2 17l10 5 10-5"/>
+                  <path d="M2 12l10 5 10-5"/>
                 </svg>
               </div>
               <h2 class="philosophy__title">経営理念</h2>
@@ -456,8 +496,8 @@
     <section class="greeting" id="greeting">
       <div class="greeting__inner">
         <div class="greeting__header">
-          <span class="section-label">GREETING</span>
-          <h2 class="section-title">ごあいさつ</h2>
+          <div class="greeting__accent-line"></div>
+          <h2 class="greeting__title">ごあいさつ</h2>
         </div>
         <div class="greeting__content">
           <div class="greeting__image">
@@ -471,7 +511,7 @@
           </div>
           <div class="greeting__text">
             <p class="greeting__position">代表取締役</p>
-            <p class="greeting__name">鈴木 凌</p>
+            <p class="greeting__name">山田 太郎</p>
             <div class="greeting__message">
               <p>
                 当社のWebサイトをご覧いただき、誠にありがとうございます。
@@ -503,8 +543,8 @@
     <section class="company-info" id="company-info">
       <div class="company-info__inner">
         <div class="company-info__header">
-          <span class="section-label">COMPANY</span>
-          <h2 class="section-title">会社概要</h2>
+          <div class="company-info__accent-line"></div>
+          <h2 class="company-info__title">会社概要</h2>
         </div>
         <div class="company-info__content">
           <table class="company-info__table">
@@ -515,7 +555,7 @@
               </tr>
               <tr>
                 <th>代表者</th>
-                <td>代表取締役 鈴木 凌</td>
+                <td>代表取締役 山田 太郎</td>
               </tr>
               <tr>
                 <th>設立</th>
@@ -560,8 +600,8 @@
     <section class="history" id="history">
       <div class="history__inner">
         <div class="history__header">
-          <span class="section-label">HISTORY</span>
-          <h2 class="section-title">沿革</h2>
+          <div class="history__accent-line"></div>
+          <h2 class="history__title">沿革</h2>
         </div>
         <div class="history__content">
           <table class="history__table">
@@ -596,8 +636,8 @@
     <section class="access" id="access">
       <div class="access__inner">
         <div class="access__header">
-          <span class="section-label">ACCESS</span>
-          <h2 class="section-title">アクセス</h2>
+          <div class="access__accent-line"></div>
+          <h2 class="access__title">アクセス</h2>
         </div>
         <div class="access__content">
           <div class="access__info">

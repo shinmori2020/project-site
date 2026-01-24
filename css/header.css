@@ -10,7 +10,6 @@
   background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: var(--shadow-md);
   z-index: 1000;
   transition: transform var(--transition-normal), opacity var(--transition-normal);
   /* Initially hidden - slides up */
@@ -113,12 +112,6 @@
   display: flex;
   align-items: center;
   gap: 12px;
-}
-
-.btn--header {
-  padding: 12px 24px;
-  font-size: 14px;
-  border-radius: 6px;
 }
 
 /* ========================================

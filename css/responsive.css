@@ -587,6 +587,23 @@
 }
 
 /* ========================================
+   Mobile Small (max-width: 480px)
+   ======================================== */
+@media (max-width: 480px) {
+  /* Footer CTA Buttons */
+  .footer__cta {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .footer__cta-btn {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+/* ========================================
    Reduced Motion
    ======================================== */
 @media (prefers-reduced-motion: reduce) {

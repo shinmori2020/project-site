@@ -95,8 +95,6 @@ body {
 .btn--primary:hover {
   background-color: var(--primary-hover);
   border-color: var(--primary-hover);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
 }
 
 .btn--secondary {
@@ -107,8 +105,17 @@ body {
 
 .btn--secondary:hover {
   background-color: var(--primary-light);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+}
+
+.btn--dark {
+  background: var(--bg-dark);
+  color: var(--white);
+  border: 2px solid var(--bg-dark);
+}
+
+.btn--dark:hover {
+  background: #1a1a1a;
+  border-color: #1a1a1a;
 }
 
 .btn--large {
