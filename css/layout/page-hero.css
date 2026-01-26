@@ -1,0 +1,416 @@
+/* ========================================
+   Page Hero - Common Subpage Header
+   下層ページ共通のヒーローセクション
+   ======================================== */
+
+/* ========================================
+   Page Hero Base
+   ======================================== */
+.page-hero {
+  padding-top: calc(var(--header-height) + 40px);
+  padding-bottom: 60px;
+}
+
+.page-hero__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ========================================
+   Header Row (Title + Breadcrumb)
+   ======================================== */
+.page-hero__header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+/* ========================================
+   Breadcrumb
+   ======================================== */
+.page-hero__breadcrumb {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.page-hero__breadcrumb-list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.page-hero__breadcrumb-item {
+  display: flex;
+  align-items: center;
+}
+
+.page-hero__breadcrumb-link {
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.page-hero__breadcrumb-link:hover {
+  color: var(--primary-color);
+}
+
+.page-hero__breadcrumb-separator {
+  color: var(--text-light);
+  margin: 0 4px;
+}
+
+.page-hero__breadcrumb-current {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* ========================================
+   Title Content
+   ======================================== */
+.page-hero__content {
+  /* Title sits in header row */
+}
+
+.page-hero__title {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.page-hero__label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.15em;
+}
+
+/* ========================================
+   Hero Image
+   ======================================== */
+.page-hero__image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.page-hero__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.page-hero__image-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  background: var(--bg-secondary);
+  color: var(--text-light);
+  border-radius: 16px;
+}
+
+.page-hero__image-placeholder span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ========================================
+   Page Nav (Navigation Buttons)
+   ======================================== */
+.page-hero__nav {
+  margin-top: 40px;
+}
+
+.page-hero__nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.page-hero__nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 14px 24px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-primary);
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  transition: all var(--transition-fast);
+}
+
+.page-hero__nav-link:hover {
+  background: var(--primary-light);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.page-hero__nav-text {
+  white-space: nowrap;
+}
+
+.page-hero__nav-arrow {
+  display: flex;
+  align-items: center;
+  color: var(--primary-color);
+}
+
+/* ========================================
+   Page CTA Section
+   ======================================== */
+.page-cta {
+  padding: 80px 0;
+  background: var(--primary-color);
+  text-align: center;
+}
+
+.page-cta__inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.page-cta__title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.page-cta__text {
+  font-size: 16px;
+  color: var(--white);
+  opacity: 0.9;
+  margin-bottom: 32px;
+}
+
+.page-cta__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.page-cta .btn--primary {
+  background: var(--white);
+  color: var(--primary-color);
+}
+
+.page-cta .btn--primary:hover {
+  background: var(--bg-secondary);
+}
+
+.page-cta .btn--outline {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
+.page-cta .btn--outline:hover {
+  background: var(--white);
+  color: var(--primary-color);
+}
+
+.page-cta .btn--lg {
+  padding: 16px 32px;
+  font-size: 16px;
+  justify-content: space-between;
+  min-width: 240px;
+}
+
+/* ========================================
+   Header Modifications for Subpage
+   ======================================== */
+.header--visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.header__nav-link--active {
+  color: var(--primary-color);
+}
+
+.header__nav-link--active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--primary-color);
+}
+
+.side-menu__link--active {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* ========================================
+   Responsive - Tablet (max-width: 1023px)
+   ======================================== */
+@media (max-width: 1023px) {
+  .page-hero {
+    padding-bottom: 48px;
+  }
+
+  .page-hero__inner {
+    padding: 0 24px;
+  }
+
+  .page-hero__breadcrumb {
+    padding: 16px 0;
+  }
+
+  .page-hero__content {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin-bottom: 24px;
+  }
+
+  .page-hero__title {
+    font-size: 32px;
+  }
+
+  .page-hero__image {
+    margin-left: 0;
+  }
+
+  .page-hero__image-placeholder {
+    aspect-ratio: 16 / 9;
+  }
+
+  .page-hero__nav {
+    margin-top: 32px;
+  }
+
+  .page-hero__nav-list {
+    flex-wrap: wrap;
+  }
+
+  .page-hero__nav-link {
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+}
+
+/* ========================================
+   Responsive - Mobile (max-width: 767px)
+   ======================================== */
+@media (max-width: 767px) {
+  .page-hero {
+    padding-bottom: 40px;
+  }
+
+  .page-hero__inner {
+    padding: 0 20px;
+  }
+
+  .page-hero__breadcrumb {
+    padding: 12px 0;
+  }
+
+  .page-hero__breadcrumb-list {
+    font-size: 12px;
+  }
+
+  .page-hero__content {
+    margin-bottom: 20px;
+  }
+
+  .page-hero__title {
+    font-size: 26px;
+    margin-bottom: 8px;
+  }
+
+  .page-hero__label {
+    font-size: 12px;
+  }
+
+  .page-hero__image-placeholder {
+    aspect-ratio: 4 / 3;
+    border-radius: 12px;
+  }
+
+  .page-hero__nav {
+    margin-top: 24px;
+  }
+
+  .page-hero__nav-link {
+    padding: 12px 16px;
+    font-size: 13px;
+    gap: 8px;
+  }
+
+  .page-hero__nav-item:first-child .page-hero__nav-link {
+    border-radius: 6px 0 0 6px;
+  }
+
+  .page-hero__nav-item:last-child .page-hero__nav-link {
+    border-radius: 0 6px 6px 0;
+  }
+
+  /* Page CTA */
+  .page-cta {
+    padding: 60px 0;
+  }
+
+  .page-cta__inner {
+    padding: 0 20px;
+  }
+
+  .page-cta__title {
+    font-size: 22px;
+  }
+
+  .page-cta__text {
+    font-size: 14px;
+  }
+
+  .page-cta .btn--lg {
+    width: auto;
+    padding: 14px 24px;
+    font-size: 14px;
+  }
+}
+
+/* ========================================
+   Responsive - Mobile Small (max-width: 480px)
+   ======================================== */
+@media (max-width: 480px) {
+  .page-hero__nav-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .page-hero__nav-link {
+    padding: 12px 10px;
+    font-size: 12px;
+    white-space: nowrap;
+    justify-content: space-between;
+  }
+
+  /* Page CTA */
+  .page-cta__buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .page-cta .btn--lg {
+    width: 100%;
+    padding: 16px 24px;
+    justify-content: space-between;
+  }
+}

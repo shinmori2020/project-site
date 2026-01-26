@@ -1,0 +1,716 @@
+/* ========================================
+   Research Page Specific Sections
+   ======================================== */
+
+/* ========================================
+   Introduction Section (導入セクション)
+   ======================================== */
+.research-intro {
+  padding: 80px 0;
+}
+
+.research-intro__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.research-intro__title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary-color);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.research-intro__text {
+  font-size: 15px;
+  color: var(--text-primary);
+  line-height: 1.9;
+  margin-bottom: 40px;
+}
+
+/* Tag Box */
+.research-intro__tag-box {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 45px 0 0;
+}
+
+.research-intro__tag-box-inner {
+  margin: 0 31px;
+  padding: 0 25px 40px;
+}
+
+.research-intro__tag-title {
+  position: relative;
+  padding-left: 55px;
+  padding-right: 25px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.6;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+}
+
+.research-intro__tag-title::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 100%;
+  background-color: var(--primary-color);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.research-intro__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.research-intro__tag {
+  display: inline-block;
+  padding: 8px 16px;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid var(--border-light);
+  transition: all var(--transition-fast);
+}
+
+.research-intro__tag:hover {
+  background: var(--primary-light);
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* ========================================
+   Service Section (サービス詳細セクション)
+   参照: クリニック杜の里 消化器内科レイアウト
+   ======================================== */
+.research-service {
+  padding: 80px 0;
+  background: var(--white);
+}
+
+.research-service__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ヘッダー部分（ボーダー + タイトル） */
+.research-service__header {
+  margin-bottom: 32px;
+}
+
+/* 上部ボーダーライン（オレンジ + グレー） */
+.research-service__accent-line {
+  width: 100%;
+  height: 4px;
+  background: var(--border-color);
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.research-service__accent-line::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 60px;
+  height: 4px;
+  background: var(--primary-color);
+}
+
+/* タイトル */
+.research-service__title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+/* 2カラムレイアウト（アイコン左 + コンテンツ右） */
+.research-service__layout {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  margin-bottom: 40px;
+}
+
+.research-service__icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 150px;
+  height: 150px;
+  background: var(--bg-secondary);
+  border-radius: 50%;
+}
+
+.research-service__icon {
+  color: var(--primary-color);
+}
+
+.research-service__icon svg {
+  width: 64px;
+  height: 64px;
+}
+
+.research-service__content {
+  flex: 1;
+}
+
+/* タグ群 */
+.research-service__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.research-service__tag {
+  display: inline-block;
+  padding: 8px 16px;
+  background: var(--white);
+  color: var(--text-primary);
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+}
+
+/* 説明テキスト */
+.research-service__description {
+  font-size: 15px;
+  color: var(--text-primary);
+  line-height: 1.9;
+}
+
+/* Methods Box（ボーダー付きボックス）
+   参照: クリニック杜の里 消化器内科「診られる主な疾患」ボックス */
+.research-service__methods {
+  background: var(--bg-secondary);
+  border: 3px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 35px 50px 30px;
+}
+
+/* 見出し（シンプルスタイル） */
+.research-service__methods-title {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.6;
+  color: var(--text-primary);
+  margin-bottom: 30px;
+}
+
+/* 4列グリッド */
+.research-service__methods-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px 32px;
+}
+
+.research-service__methods-list {
+  list-style: none;
+}
+
+.research-service__methods-list li {
+  position: relative;
+  padding-left: 20px;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: var(--text-primary);
+  line-height: 1.6;
+  border-bottom: 1px dashed #ccc;
+}
+
+.research-service__methods-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  background: var(--primary-color);
+  border-radius: 50%;
+}
+
+.research-service__methods-list li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+/* ========================================
+   Pricing Section (料金プランセクション)
+   データ解析支援と同じヘッダースタイル
+   ======================================== */
+.research-pricing {
+  padding: 80px 0;
+  background: var(--white);
+}
+
+.research-pricing__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ヘッダー部分（ボーダー + タイトル） */
+.research-pricing__header {
+  margin-bottom: 32px;
+}
+
+/* 上部ボーダーライン（青 + グレー） */
+.research-pricing__accent-line {
+  width: 100%;
+  height: 4px;
+  background: var(--border-color);
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.research-pricing__accent-line::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 60px;
+  height: 4px;
+  background: var(--primary-color);
+}
+
+/* タイトル行（アイコン + タイトル） */
+.research-pricing__title-row {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.research-pricing__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 150px;
+  height: 150px;
+  background: var(--bg-secondary);
+  border-radius: 50%;
+  color: var(--primary-color);
+}
+
+.research-pricing__title-content {
+  flex: 1;
+}
+
+.research-pricing__title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 24px;
+}
+
+.research-pricing__subtitle {
+  flex: 1;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+/* Pricing Table */
+.research-pricing__table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--border-color);
+}
+
+.research-pricing__table tr {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.research-pricing__table tr:last-child {
+  border-bottom: none;
+}
+
+.research-pricing__table th,
+.research-pricing__table td {
+  padding: 20px 24px;
+  text-align: left;
+  vertical-align: middle;
+  border-right: 1px solid var(--border-color);
+}
+
+.research-pricing__table th:last-child,
+.research-pricing__table td:last-child {
+  border-right: none;
+}
+
+/* 見出しセル（グレー背景） */
+.research-pricing__table th {
+  width: 25%;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: #f5f5f5;
+}
+
+/* 値段セル（白背景） */
+.research-pricing__table td {
+  width: 25%;
+  font-size: 15px;
+  color: var(--text-primary);
+  background: var(--white);
+}
+
+.research-pricing__note {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 400;
+  padding: 16px;
+  text-align: center;
+  background: #f5f5f5 !important;
+}
+
+/* ========================================
+   Showcase Section (提供サービスセクション)
+   ======================================== */
+.research-showcase {
+  padding: 80px 0;
+  background: var(--white);
+}
+
+.research-showcase__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.research-showcase__header-box {
+  background: var(--bg-secondary);
+  padding: 32px;
+  border-radius: 8px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.research-showcase__main-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 12px;
+}
+
+.research-showcase__main-subtitle {
+  font-size: 15px;
+  color: var(--text-secondary);
+}
+
+/* Showcase Item */
+.research-showcase__item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.research-showcase__item--reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+.research-showcase__item--reverse .research-showcase__content {
+  order: 2;
+}
+
+.research-showcase__item--reverse .research-showcase__image {
+  order: 1;
+}
+
+.research-showcase__content {
+  order: 1;
+}
+
+.research-showcase__item-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.research-showcase__item-bullet {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.research-showcase__item-text {
+  font-size: 15px;
+  color: var(--text-primary);
+  line-height: 1.9;
+  margin-bottom: 16px;
+}
+
+.research-showcase__item-text:last-child {
+  margin-bottom: 0;
+}
+
+.research-showcase__image {
+  order: 2;
+}
+
+.research-showcase__image-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--text-light);
+}
+
+.research-showcase__image-placeholder span {
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+.research-showcase__divider {
+  width: 100%;
+  height: 1px;
+  background: var(--border-color);
+  margin: 48px 0;
+}
+
+/* ========================================
+   Responsive - Tablet (max-width: 1023px)
+   ======================================== */
+@media (max-width: 1023px) {
+  .research-service__layout {
+    gap: 32px;
+  }
+
+  .research-service__icon-wrapper {
+    width: 120px;
+    height: 120px;
+  }
+
+  .research-service__icon svg {
+    width: 56px;
+    height: 56px;
+  }
+
+  .research-service__methods-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .research-showcase__item,
+  .research-showcase__item--reverse {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .research-showcase__item--reverse .research-showcase__content {
+    order: 1;
+  }
+
+  .research-showcase__item--reverse .research-showcase__image {
+    order: 2;
+  }
+}
+
+/* ========================================
+   Responsive - Mobile (max-width: 767px)
+   ======================================== */
+@media (max-width: 767px) {
+  .research-intro__inner {
+    padding: 0 20px;
+  }
+
+  .research-intro__title {
+    font-size: 22px;
+  }
+
+  .research-intro__tag-box {
+    padding: 24px 0 0;
+    overflow: hidden;
+  }
+
+  .research-intro__tag-box-inner {
+    margin: 0 16px;
+    padding: 0 16px 24px;
+  }
+
+  .research-intro__tag-title {
+    margin: 0 16px;
+    padding-left: 24px;
+    font-size: 18px;
+  }
+
+  .research-service__inner {
+    padding: 0 20px;
+  }
+
+  .research-service__layout {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .research-service__icon-wrapper {
+    width: 80px;
+    height: 80px;
+  }
+
+  .research-service__icon svg {
+    width: 48px;
+    height: 48px;
+  }
+
+  .research-service__title {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .research-service__tags {
+    justify-content: flex-start;
+  }
+
+  .research-service__methods {
+    padding: 24px 20px 20px;
+  }
+
+  .research-service__methods-title {
+    font-size: 18px;
+  }
+
+  .research-service__methods-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .research-pricing__inner {
+    padding: 0 20px;
+  }
+
+  .research-pricing__title-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .research-pricing__icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .research-pricing__icon svg {
+    width: 48px;
+    height: 48px;
+  }
+
+  .research-pricing__title-content {
+    text-align: center;
+  }
+
+  .research-pricing__title {
+    font-size: 22px;
+  }
+
+  .research-pricing__subtitle {
+    text-align: left;
+    align-self: flex-start;
+    width: 100%;
+  }
+
+  .research-pricing__table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+  }
+
+  .research-pricing__table th,
+  .research-pricing__table td {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .research-pricing__table tr {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .research-pricing__table tr:last-child td:last-child {
+    border-bottom: none;
+  }
+
+  .research-pricing__table th {
+    background: #f5f5f5;
+  }
+
+  .research-pricing__table td {
+    background: var(--white);
+  }
+
+  .research-showcase__inner {
+    padding: 0 20px;
+  }
+
+  .research-showcase__header-box {
+    padding: 24px;
+  }
+
+  .research-showcase__main-title {
+    font-size: 22px;
+  }
+
+  .research-showcase__item-title {
+    font-size: 18px;
+  }
+}
+
+/* ========================================
+   Responsive - Small Mobile (max-width: 480px)
+   ======================================== */
+@media (max-width: 480px) {
+  .research-intro {
+    padding: 60px 0;
+  }
+
+  .research-service,
+  .research-pricing,
+  .research-showcase {
+    padding: 60px 0;
+  }
+
+  .research-intro__tags {
+    gap: 8px;
+  }
+
+  .research-intro__tag {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}

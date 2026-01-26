@@ -79,13 +79,14 @@
   max-width: 340px;
   height: 100%;
   background: var(--white);
-  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15);
+  box-shadow: none;
   overflow-y: auto;
-  transition: right var(--transition-normal);
+  transition: right var(--transition-normal), box-shadow var(--transition-normal);
 }
 
 .side-menu.active .side-menu__content {
   right: 0;
+  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15);
 }
 
 /* Close Button */
