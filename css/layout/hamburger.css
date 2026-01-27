@@ -207,6 +207,14 @@
   color: var(--primary-color);
 }
 
+.side-menu__disabled {
+  display: block;
+  padding: 14px 24px 14px 40px;
+  font-size: 15px;
+  color: var(--text-light);
+  cursor: default;
+}
+
 /* CTA */
 .side-menu__cta {
   padding: 24px;

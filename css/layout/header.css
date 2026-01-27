@@ -151,3 +151,11 @@
   background: var(--primary-light);
   color: var(--primary-color);
 }
+
+.header__dropdown-disabled {
+  display: block;
+  padding: 12px 20px;
+  font-size: 14px;
+  color: var(--text-light);
+  cursor: default;
+}

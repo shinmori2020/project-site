@@ -235,6 +235,12 @@
   text-align: center;
 }
 
+.footer__nav-disabled {
+  font-size: 14px;
+  color: var(--text-light);
+  cursor: default;
+}
+
 .footer__copyright {
   font-size: 13px;
   color: var(--text-light);
