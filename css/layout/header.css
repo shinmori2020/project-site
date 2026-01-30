@@ -13,8 +13,8 @@
   z-index: 1000;
   transition: transform var(--transition-normal), opacity var(--transition-normal);
   /* Initially hidden - slides up */
-  transform: translateY(-100%);
-  opacity: 0;
+  transform: translateY(0);
+  opacity: 1;
 }
 
 /* Show header when scrolled */
@@ -127,7 +127,7 @@
   box-shadow: var(--shadow-lg);
   border-radius: 8px;
   padding: 8px 0;
-  opacity: 0;
+  opacity: 1;
   visibility: hidden;
   transition: all var(--transition-fast);
   z-index: 100;
