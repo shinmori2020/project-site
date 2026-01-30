@@ -3,7 +3,219 @@
    ======================================== */
 
 /* ========================================
+   Hero V2 Section - Full Width Background Image
+   (Excel デザイン案 メイン②)
+   ======================================== */
+.hero-v2 {
+  position: relative;
+  width: 100%;
+}
+
+.hero-v2__background {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  background: linear-gradient(135deg, #87CEEB 0%, #E0F4FF 50%, #FFFFFF 100%);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 60px;
+}
+
+.hero-v2__bg-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  color: var(--text-light);
+  text-align: center;
+}
+
+.hero-v2__bg-placeholder p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.hero-v2__bg-placeholder span {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* 背景画像が設定された場合 */
+.hero-v2__background--has-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-v2__background--has-image .hero-v2__bg-placeholder {
+  display: none;
+}
+
+.hero-v2__copy {
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px 32px;
+  border-radius: 4px;
+}
+
+.hero-v2__title {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+}
+
+/* ナビゲーションボックス */
+.hero-v2__nav-wrapper {
+  width: 100%;
+  background: var(--white);
+  border-top: 1px solid var(--border-color);
+}
+
+.hero-v2__nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-v2__nav-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 20px;
+  text-align: center;
+  border-right: 1px solid var(--border-color);
+  transition: all var(--transition-fast);
+  min-height: 100px;
+}
+
+.hero-v2__nav-box:last-child {
+  border-right: none;
+}
+
+.hero-v2__nav-box:hover {
+  background: var(--bg-light);
+}
+
+.hero-v2__nav-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.hero-v2__nav-sub {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+/* ========================================
+   News V2 Section - Table Style
+   (Excel デザイン案)
+   ======================================== */
+.news-v2 {
+  padding: 60px 0;
+  background: var(--white);
+}
+
+.news-v2__inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.news-v2__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--text-primary);
+}
+
+.news-v2__title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.news-v2__more-link {
+  font-size: 14px;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.news-v2__more-link:hover {
+  color: var(--primary-color);
+}
+
+.news-v2__table-wrapper {
+  width: 100%;
+}
+
+.news-v2__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.news-v2__th {
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  text-align: left;
+}
+
+.news-v2__th--date {
+  width: 120px;
+  text-align: center;
+}
+
+.news-v2__th--content {
+  width: auto;
+}
+
+.news-v2__td {
+  padding: 16px;
+  font-size: 14px;
+  border: 1px solid var(--border-color);
+  vertical-align: top;
+}
+
+.news-v2__td--date {
+  text-align: center;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.news-v2__td--content a {
+  color: var(--text-primary);
+  transition: color var(--transition-fast);
+}
+
+.news-v2__td--content a:hover {
+  color: var(--primary-color);
+}
+
+.news-v2__row {
+  min-height: 50px;
+}
+
+/* ========================================
    Hero Section - 2 Column Layout (Full Width)
+   (旧デザイン - 参考用に残す)
    ======================================== */
 .hero {
   position: relative;
