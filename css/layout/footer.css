@@ -245,3 +245,40 @@
   font-size: 13px;
   color: var(--text-light);
 }
+
+/* ========================================
+   TOPページ用 フッターレイアウト
+   ======================================== */
+
+/* 横一列ナビゲーション */
+.footer__horizontal-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.footer__horizontal-nav-divider {
+  display: none;
+}
+
+.footer__horizontal-nav-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.footer__horizontal-nav-link:hover {
+  color: var(--primary-color);
+}
+
+.footer__horizontal-nav-divider {
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+/* TOPページ用: 左寄せ（元のレイアウト維持） */
+.footer--top-page .footer__top--centered {
+  display: block;
+}

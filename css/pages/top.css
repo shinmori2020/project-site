@@ -11,6 +11,44 @@
   width: 100%;
 }
 
+/* スライダー */
+.hero-v2__slider {
+  position: relative;
+  width: 100%;
+  /* ウィンドウの高さいっぱい - 下のナビは画面外に隠れる */
+  height: 100vh;
+  min-height: 400px;
+  overflow: hidden;
+}
+
+.hero-v2__slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-v2__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero-v2__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-v2__slide--active {
+  opacity: 1;
+}
+
+/* 旧：背景画像エリア（フォールバック用に残す） */
 .hero-v2__background {
   position: relative;
   width: 100%;
@@ -58,19 +96,50 @@
 
 .hero-v2__copy {
   position: absolute;
-  top: 60px;
-  left: 60px;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 20px 32px;
-  border-radius: 4px;
+  bottom: 60px;
+  left: 50px;
+  /* 初期状態：左に30pxずれて透明 */
+  opacity: 0;
+  transform: translateX(-30px);
+  /* アニメーション */
+  animation: slideInFromLeft 1s ease-out 0.5s forwards;
+}
+
+/* フェードイン + 左からスライドアニメーション */
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .hero-v2__title {
-  font-size: 24px;
-  font-weight: 500;
-  color: var(--text-primary);
-  letter-spacing: 0.05em;
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.12em;
   line-height: 1.6;
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.4),
+    0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .hero-v2__copy {
+    bottom: 32px;
+    left: 20px;
+    right: 20px;
+  }
+
+  .hero-v2__title {
+    font-size: 22px;
+    letter-spacing: 0.08em;
+  }
 }
 
 /* ナビゲーションボックス */

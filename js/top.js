@@ -11,8 +11,32 @@ document.addEventListener('DOMContentLoaded', function() {
  * TOP page specific functionality
  */
 function initTopPage() {
+  // ヒーロースライダーの初期化
+  initHeroSlider();
   // スクロールアニメーションの初期化（将来的な拡張用）
   initScrollAnimations();
+}
+
+/**
+ * Hero Slider
+ * メインビジュアルのスライダー機能
+ */
+function initHeroSlider() {
+  const slides = document.querySelectorAll('.hero-v2__slide');
+
+  if (slides.length <= 1) return;
+
+  let currentSlide = 0;
+  const slideInterval = 5000; // 5秒ごとに切り替え
+
+  function nextSlide() {
+    slides[currentSlide].classList.remove('hero-v2__slide--active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('hero-v2__slide--active');
+  }
+
+  // 自動スライド開始
+  setInterval(nextSlide, slideInterval);
 }
 
 /**

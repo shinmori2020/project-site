@@ -152,17 +152,15 @@
   <main class="main">
     <!-- メインビジュアル（新デザイン） -->
     <section class="hero-v2" id="hero">
-      <!-- 背景画像エリア -->
-      <div class="hero-v2__background">
-        <!-- 画像が設定されるまでのプレースホルダー -->
-        <div class="hero-v2__bg-placeholder">
-          <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-            <circle cx="8.5" cy="8.5" r="1.5"/>
-            <polyline points="21 15 16 10 5 21"/>
-          </svg>
-          <p>メインビジュアル画像</p>
-          <span>青空と雲の画像を設定予定</span>
+      <!-- 背景画像スライダー -->
+      <div class="hero-v2__slider">
+        <div class="hero-v2__slides">
+          <div class="hero-v2__slide hero-v2__slide--active">
+            <img src="images/hero_slide_01.jpg" alt="メインビジュアル1">
+          </div>
+          <div class="hero-v2__slide">
+            <img src="images/hero_slide_02.jpg" alt="メインビジュアル2">
+          </div>
         </div>
         <!-- キャッチコピー -->
         <div class="hero-v2__copy">
@@ -716,10 +714,25 @@
   </main>
 
   <!-- フッター -->
-  <footer class="footer">
+  <footer class="footer footer--top-page">
     <div class="footer__inner">
-      <div class="footer__top">
-        <!-- 左側: 会社情報 -->
+      <!-- 横一列ナビゲーション -->
+      <nav class="footer__horizontal-nav">
+        <a href="./" class="footer__horizontal-nav-link">トップページ</a>
+        <span class="footer__horizontal-nav-divider">|</span>
+        <a href="consultation/" class="footer__horizontal-nav-link">看護支援事業</a>
+        <span class="footer__horizontal-nav-divider">|</span>
+        <a href="recruitment/" class="footer__horizontal-nav-link">有料職業紹介事業</a>
+        <span class="footer__horizontal-nav-divider">|</span>
+        <a href="about/" class="footer__horizontal-nav-link">会社概要</a>
+        <span class="footer__horizontal-nav-divider">|</span>
+        <a href="#contact" class="footer__horizontal-nav-link">お問い合わせ</a>
+        <span class="footer__horizontal-nav-divider">|</span>
+        <a href="privacy/" class="footer__horizontal-nav-link">個人情報保護方針</a>
+      </nav>
+
+      <div class="footer__top footer__top--centered">
+        <!-- 会社情報 -->
         <div class="footer__info">
           <!-- ロゴ + 会社名 -->
           <div class="footer__brand">
@@ -764,26 +777,6 @@
             </a>
           </div>
         </div>
-
-        <!-- 右側: ナビゲーション -->
-        <nav class="footer__nav">
-          <!-- 左列: ホーム・会社概要・お問い合わせ -->
-          <div class="footer__nav-col footer__nav-col--links">
-            <a href="./" class="footer__nav-link">ホーム</a>
-            <a href="about/" class="footer__nav-link">会社概要</a>
-            <a href="#contact" class="footer__nav-link">お問い合わせ</a>
-          </div>
-
-          <!-- 中央列: 看護コンサルテーション -->
-          <div class="footer__nav-col">
-            <a href="consultation/" class="footer__nav-title-link">看護コンサルテーション事業</a>
-          </div>
-
-          <!-- 右列: 人材紹介事業 -->
-          <div class="footer__nav-col">
-            <a href="recruitment/" class="footer__nav-title-link">人材紹介事業</a>
-          </div>
-        </nav>
       </div>
 
       <!-- コピーライト -->

@@ -566,10 +566,25 @@
   </main>
 
   <!-- フッター -->
-  <footer class="footer">
+  <footer class="footer footer--top-page">
     <div class="footer__inner">
-      <div class="footer__top">
-        <!-- 左側: 会社情報 -->
+      <!-- 横一列ナビゲーション -->
+      <nav class="footer__horizontal-nav">
+        <a href="../" class="footer__horizontal-nav-link">トップページ</a>
+        <span class="footer__horizontal-nav-divider">|</span>
+        <a href="./" class="footer__horizontal-nav-link">看護支援事業</a>
+        <span class="footer__horizontal-nav-divider">|</span>
+        <a href="../recruitment/" class="footer__horizontal-nav-link">有料職業紹介事業</a>
+        <span class="footer__horizontal-nav-divider">|</span>
+        <a href="../about/" class="footer__horizontal-nav-link">会社概要</a>
+        <span class="footer__horizontal-nav-divider">|</span>
+        <a href="../#contact" class="footer__horizontal-nav-link">お問い合わせ</a>
+        <span class="footer__horizontal-nav-divider">|</span>
+        <a href="../privacy/" class="footer__horizontal-nav-link">個人情報保護方針</a>
+      </nav>
+
+      <div class="footer__top footer__top--centered">
+        <!-- 会社情報 -->
         <div class="footer__info">
           <!-- ロゴ + 会社名 -->
           <div class="footer__brand">
@@ -614,26 +629,6 @@
             </a>
           </div>
         </div>
-
-        <!-- 右側: ナビゲーション -->
-        <nav class="footer__nav">
-          <!-- 左列: ホーム・会社概要・お問い合わせ -->
-          <div class="footer__nav-col footer__nav-col--links">
-            <a href="../" class="footer__nav-link">ホーム</a>
-            <a href="../about/" class="footer__nav-link">会社概要</a>
-            <a href="../#contact" class="footer__nav-link">お問い合わせ</a>
-          </div>
-
-          <!-- 中央列: 看護コンサルテーション事業 -->
-          <div class="footer__nav-col">
-            <a href="../consultation/" class="footer__nav-title-link">看護コンサルテーション事業</a>
-          </div>
-
-          <!-- 右列: 人材紹介事業 -->
-          <div class="footer__nav-col">
-            <a href="../recruitment/" class="footer__nav-title-link">人材紹介事業</a>
-          </div>
-        </nav>
       </div>
 
       <!-- コピーライト -->
