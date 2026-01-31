@@ -131,14 +131,20 @@
 
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
+  .hero-v2__slider {
+    height: auto;
+    min-height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
   .hero-v2__copy {
-    bottom: 32px;
+    bottom: 24px;
     left: 20px;
     right: 20px;
   }
 
   .hero-v2__title {
-    font-size: 22px;
+    font-size: 18px;
     letter-spacing: 0.08em;
   }
 }

@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="シナリス・エージェントは、看護師専門の人材紹介サービスです。CNSによる看護マネジメント支援で、長く続けられるマッチングを実現します。">
+  <title>有料職業紹介事業 | シナリス・エージェント | 株式会社 Synalis</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="../images/favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/variables.css">
+  <link rel="stylesheet" href="../css/layout/common.css">
+  <link rel="stylesheet" href="../css/layout/header.css">
+  <link rel="stylesheet" href="../css/layout/footer.css">
+  <link rel="stylesheet" href="../css/layout/hamburger.css">
+  <link rel="stylesheet" href="../css/pages/recruitment.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <!-- ロゴ -->
+      <div class="header__logo">
+        <a href="../">
+          <img src="../images/logo.svg" alt="株式会社 Synalis" width="180" height="50">
+        </a>
+      </div>
+
+      <!-- 右側: ナビ + CTA -->
+      <div class="header__right pc-only">
+        <!-- PC用ナビゲーション -->
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item has-dropdown">
+              <a href="../consultation/" class="header__nav-link">
+                <span class="header__nav-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                  </svg>
+                </span>
+                <span class="header__nav-text">看護コンサルテーション事業</span>
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <a href="./" class="header__nav-link">
+                <span class="header__nav-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                  </svg>
+                </span>
+                <span class="header__nav-text">人材紹介事業</span>
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <a href="../about/" class="header__nav-link">
+                <span class="header__nav-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9 22 9 12 15 12 15 22"/>
+                  </svg>
+                </span>
+                <span class="header__nav-text">会社概要</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- CTAボタン -->
+        <div class="header__cta">
+          <a href="../#contact" class="btn btn--primary btn--header">お問い合わせ</a>
+          <a href="tel:000-0000-0000" class="btn btn--dark btn--header">
+            <span class="btn__icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </span>
+            000-0000-0000
+          </a>
+        </div>
+      </div>
+
+      <!-- ハンバーガーボタン（SP） -->
+      <button class="hamburger sp-only" id="hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="sideMenu">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- サイドメニュー（SP） -->
+  <div class="side-menu" id="sideMenu" aria-hidden="true">
+    <div class="side-menu__overlay" id="sideMenuOverlay"></div>
+    <div class="side-menu__content">
+      <button class="side-menu__close" id="sideMenuClose" aria-label="メニューを閉じる">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="side-menu__logo">
+        <a href="../">
+          <img src="../images/logo.svg" alt="株式会社 Synalis" width="160" height="48">
+        </a>
+      </div>
+      <nav class="side-menu__nav">
+        <ul class="side-menu__list">
+          <li class="side-menu__item">
+            <a href="../" class="side-menu__link">TOP</a>
+          </li>
+          <li class="side-menu__item">
+            <a href="../consultation/" class="side-menu__link">看護コンサルテーション事業</a>
+          </li>
+          <li class="side-menu__item">
+            <a href="./" class="side-menu__link">人材紹介事業</a>
+          </li>
+          <li class="side-menu__item">
+            <a href="../about/" class="side-menu__link">会社概要</a>
+          </li>
+        </ul>
+        <div class="side-menu__cta">
+          <a href="../#contact" class="btn btn--primary btn--block">お問い合わせ</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <main class="main">
+    <!-- メインビジュアル -->
+    <section class="recruit-hero">
+      <div class="recruit-hero__bg">
+        <img src="../images/service_hero.jpg" alt="有料職業紹介事業" class="recruit-hero__bg-image">
+      </div>
+      <div class="recruit-hero__content">
+        <div class="recruit-hero__copy">
+          <p class="recruit-hero__catchphrase">「辞めない現場」を創り、<br class="sp-only">「続くマッチング」を叶える。</p>
+          <p class="recruit-hero__sub">CNSによる看護マネジメント支援 × 未来を創る人材紹介</p>
+        </div>
+        <img src="../images/logo.svg" alt="株式会社 Synalis" class="recruit-hero__logo">
+      </div>
+    </section>
+
+    <!-- シナリス・エージェントとは？ -->
+    <section class="recruit-about" id="about">
+      <div class="recruit-about__inner">
+        <!-- 見出し -->
+        <div class="recruit-about__header">
+          <h2 class="recruit-about__title">シナリス・エージェントとは？</h2>
+        </div>
+
+        <div class="recruit-about__content">
+          <div class="recruit-about__image">
+            <div class="recruit-about__image-placeholder">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <circle cx="8.5" cy="8.5" r="1.5"/>
+                <polyline points="21 15 16 10 5 21"/>
+              </svg>
+              <span>写真（看護師2名）</span>
+            </div>
+          </div>
+
+          <div class="recruit-about__text">
+            <p class="recruit-about__catchphrase">「転職はゴールではなく、新しいキャリアのスタートライン。」</p>
+
+            <div class="recruit-about__description">
+              <p>現代の看護現場において、人材不足は深刻な課題です。しかし、ただ「人を補充する」だけでは、現場の負担は根本からは解決しません。</p>
+
+              <p>私たちは、<strong>「定着する現場を創り、長く続けられるマッチングを叶える」</strong>ことをミッションに掲げています。</p>
+
+              <p>紹介して終わりではない。私たちはCNSの知見を活かし、組織の土壌を耕し、一人ひとりのナースがその場所で根を張れる未来を共に創ります。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 転職の流れ -->
+    <section class="recruit-flow" id="flow">
+      <div class="recruit-flow__inner">
+        <!-- 見出し -->
+        <div class="recruit-flow__header">
+          <h2 class="recruit-flow__title">転職の流れ</h2>
+        </div>
+
+        <!-- フローステップ -->
+        <div class="recruit-flow__grid">
+          <div class="recruit-flow__step">
+            <div class="recruit-flow__step-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <h3 class="recruit-flow__step-title">まずはご相談受付<span class="recruit-flow__step-sub">（電話・メール）</span></h3>
+            <p class="recruit-flow__step-text">専任の担当者があなたの転職についてヒアリングをいたします。</p>
+          </div>
+
+          <div class="recruit-flow__step">
+            <div class="recruit-flow__step-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h3 class="recruit-flow__step-title">希望条件を事前確認<span class="recruit-flow__step-sub">（来社・オンライン）</span></h3>
+            <p class="recruit-flow__step-text">転職について詳細をお伺いして要件をご紹介いたします。</p>
+          </div>
+
+          <div class="recruit-flow__step">
+            <div class="recruit-flow__step-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+              </svg>
+            </div>
+            <h3 class="recruit-flow__step-title">書類提出・日程調整</h3>
+            <p class="recruit-flow__step-text">応募に必要な書類をご用意いただき、弊社で代行して面接の日程を調整します。</p>
+          </div>
+
+          <div class="recruit-flow__step">
+            <div class="recruit-flow__step-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                <line x1="9" y1="9" x2="9.01" y2="9"/>
+                <line x1="15" y1="9" x2="15.01" y2="9"/>
+              </svg>
+            </div>
+            <h3 class="recruit-flow__step-title">面接・アフターフォロー</h3>
+            <p class="recruit-flow__step-text">担当者が面接をサポートし、入職後もフォローアップいたします。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- お問い合わせフォームセクション -->
+    <section class="recruit-contact" id="contact">
+      <div class="recruit-contact__inner">
+        <!-- 見出し -->
+        <div class="recruit-contact__header">
+          <h2 class="recruit-contact__title">お問い合わせ</h2>
+          <p class="recruit-contact__subtitle">資料請求・お申し込みはこちらから</p>
+        </div>
+
+        <!-- タブボタン -->
+        <div class="recruit-contact__tabs">
+          <button type="button" class="recruit-contact__tab is-active" data-tab="request">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+            </svg>
+            資料請求
+          </button>
+          <button type="button" class="recruit-contact__tab" data-tab="apply">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="8.5" cy="7" r="4"/>
+              <polyline points="17 11 19 13 23 9"/>
+            </svg>
+            申し込み
+          </button>
+        </div>
+
+        <!-- フォームエリア -->
+        <div class="recruit-contact__form-area">
+          <!-- 資料請求フォーム -->
+          <div class="recruit-contact__panel is-active" data-panel="request">
+            <form class="contact__form" action="#" method="post">
+              <div class="contact__form-group">
+                <label for="request-name" class="contact__label">
+                  お名前
+                  <span class="contact__required">必須</span>
+                </label>
+                <input type="text" id="request-name" name="name" class="contact__input" placeholder="山田 太郎" required>
+              </div>
+
+              <div class="contact__form-group">
+                <label for="request-company" class="contact__label">
+                  会社名・施設名
+                </label>
+                <input type="text" id="request-company" name="company" class="contact__input" placeholder="株式会社〇〇 / 〇〇病院">
+              </div>
+
+              <div class="contact__form-group">
+                <label for="request-email" class="contact__label">
+                  メールアドレス
+                  <span class="contact__required">必須</span>
+                </label>
+                <input type="email" id="request-email" name="email" class="contact__input" placeholder="example@email.com" required>
+              </div>
+
+              <div class="contact__form-group">
+                <label for="request-tel" class="contact__label">
+                  電話番号
+                </label>
+                <input type="tel" id="request-tel" name="tel" class="contact__input" placeholder="000-0000-0000">
+              </div>
+
+              <div class="contact__form-group">
+                <label for="request-type" class="contact__label">
+                  ご希望の資料
+                  <span class="contact__required">必須</span>
+                </label>
+                <select id="request-type" name="type" class="contact__select" required>
+                  <option value="">選択してください</option>
+                  <option value="service">サービス案内</option>
+                  <option value="company">会社案内</option>
+                  <option value="both">両方</option>
+                </select>
+              </div>
+
+              <div class="contact__form-group">
+                <label for="request-message" class="contact__label">
+                  ご質問・ご要望
+                </label>
+                <textarea id="request-message" name="message" class="contact__textarea" rows="4" placeholder="ご質問やご要望があればご記入ください"></textarea>
+              </div>
+
+              <!-- プライバシーポリシー -->
+              <div class="contact__form-group contact__form-group--privacy-embed">
+                <label class="contact__label">プライバシーポリシー</label>
+                <div class="contact__privacy-scroll">
+                  <p class="privacy__intro">
+                    本ウェブサイト（以下、「本サイト」）を運営する株式会社 Synalis（以下、「当社」）は、提供する看護コンサルテーション事業および有料職業紹介事業（以下、「本サービス」）における、ユーザーの個人情報の取扱いについて、以下の通りプライバシーポリシー（以下、「本ポリシー」）を定めます。
+                  </p>
+                  <div class="privacy__section">
+                    <h4 class="privacy__section-title">1. 個人情報の収集方法</h4>
+                    <p class="privacy__text">当社は、ユーザーが本サービスを利用する際に、氏名、生年月日、住所、電話番号、メールアドレス、看護師免許番号、勤務経歴、現在の年収等の個人情報を、入力フォーム、または書面等を通じて収集することがあります。</p>
+                  </div>
+                  <div class="privacy__section">
+                    <h4 class="privacy__section-title">2. 個人情報の利用目的</h4>
+                    <p class="privacy__text">当社が個人情報を収集・利用する目的は、有料職業紹介事業、看護コンサルテーション事業、情報配信、サービスの改善・分析のためです。</p>
+                  </div>
+                  <div class="privacy__section">
+                    <h4 class="privacy__section-title">3. 個人情報の第三者提供について</h4>
+                    <p class="privacy__text">当社は、法令に基づく場合等を除き、ユーザーの同意を得ることなく第三者に個人情報を提供することはありません。</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact__form-group contact__form-group--privacy">
+                <label class="contact__checkbox-label">
+                  <input type="checkbox" name="privacy" class="contact__checkbox" required>
+                  <span class="contact__checkbox-text">上記プライバシーポリシーに同意する</span>
+                </label>
+              </div>
+
+              <div class="contact__form-group contact__form-group--submit">
+                <button type="submit" class="btn btn--primary btn--lg contact__submit-btn">
+                  資料を請求する
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 2L11 13"/>
+                    <path d="M22 2L15 22L11 13L2 9L22 2Z"/>
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- 申し込みフォーム -->
+          <div class="recruit-contact__panel" data-panel="apply">
+            <form class="contact__form" action="#" method="post">
+              <div class="contact__form-group">
+                <label for="apply-name" class="contact__label">
+                  お名前
+                  <span class="contact__required">必須</span>
+                </label>
+                <input type="text" id="apply-name" name="name" class="contact__input" placeholder="山田 太郎" required>
+              </div>
+
+              <div class="contact__form-group">
+                <label for="apply-email" class="contact__label">
+                  メールアドレス
+                  <span class="contact__required">必須</span>
+                </label>
+                <input type="email" id="apply-email" name="email" class="contact__input" placeholder="example@email.com" required>
+              </div>
+
+              <div class="contact__form-group">
+                <label for="apply-tel" class="contact__label">
+                  電話番号
+                  <span class="contact__required">必須</span>
+                </label>
+                <input type="tel" id="apply-tel" name="tel" class="contact__input" placeholder="000-0000-0000" required>
+              </div>
+
+              <div class="contact__form-group">
+                <label for="apply-experience" class="contact__label">
+                  看護師経験年数
+                </label>
+                <select id="apply-experience" name="experience" class="contact__select">
+                  <option value="">選択してください</option>
+                  <option value="1-3">1〜3年</option>
+                  <option value="4-5">4〜5年</option>
+                  <option value="6-10">6〜10年</option>
+                  <option value="11+">11年以上</option>
+                </select>
+              </div>
+
+              <div class="contact__form-group">
+                <label for="apply-area" class="contact__label">
+                  希望勤務地
+                </label>
+                <input type="text" id="apply-area" name="area" class="contact__input" placeholder="例：大阪府、関西圏など">
+              </div>
+
+              <div class="contact__form-group">
+                <label for="apply-message" class="contact__label">
+                  ご希望・ご相談内容
+                </label>
+                <textarea id="apply-message" name="message" class="contact__textarea" rows="4" placeholder="転職に関するご希望やご相談内容をご記入ください"></textarea>
+              </div>
+
+              <!-- プライバシーポリシー -->
+              <div class="contact__form-group contact__form-group--privacy-embed">
+                <label class="contact__label">プライバシーポリシー</label>
+                <div class="contact__privacy-scroll">
+                  <p class="privacy__intro">
+                    本ウェブサイト（以下、「本サイト」）を運営する株式会社 Synalis（以下、「当社」）は、提供する看護コンサルテーション事業および有料職業紹介事業（以下、「本サービス」）における、ユーザーの個人情報の取扱いについて、以下の通りプライバシーポリシー（以下、「本ポリシー」）を定めます。
+                  </p>
+                  <div class="privacy__section">
+                    <h4 class="privacy__section-title">1. 個人情報の収集方法</h4>
+                    <p class="privacy__text">当社は、ユーザーが本サービスを利用する際に、氏名、生年月日、住所、電話番号、メールアドレス、看護師免許番号、勤務経歴、現在の年収等の個人情報を、入力フォーム、または書面等を通じて収集することがあります。</p>
+                  </div>
+                  <div class="privacy__section">
+                    <h4 class="privacy__section-title">2. 個人情報の利用目的</h4>
+                    <p class="privacy__text">当社が個人情報を収集・利用する目的は、有料職業紹介事業、看護コンサルテーション事業、情報配信、サービスの改善・分析のためです。</p>
+                  </div>
+                  <div class="privacy__section">
+                    <h4 class="privacy__section-title">3. 個人情報の第三者提供について</h4>
+                    <p class="privacy__text">当社は、法令に基づく場合等を除き、ユーザーの同意を得ることなく第三者に個人情報を提供することはありません。</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact__form-group contact__form-group--privacy">
+                <label class="contact__checkbox-label">
+                  <input type="checkbox" name="privacy" class="contact__checkbox" required>
+                  <span class="contact__checkbox-text">上記プライバシーポリシーに同意する</span>
+                </label>
+              </div>
+
+              <div class="contact__form-group contact__form-group--submit">
+                <button type="submit" class="btn btn--primary btn--lg contact__submit-btn">
+                  申し込む
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 2L11 13"/>
+                    <path d="M22 2L15 22L11 13L2 9L22 2Z"/>
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer footer--top-page">
+    <div class="footer__inner">
+      <!-- 横一列ナビゲーション -->
+      <nav class="footer__horizontal-nav">
+        <a href="../" class="footer__horizontal-nav-link">トップページ</a>
+        <span class="footer__horizontal-nav-divider">|</span>
+        <a href="../research/" class="footer__horizontal-nav-link">看護支援事業</a>
+        <span class="footer__horizontal-nav-divider">|</span>
+        <a href="./" class="footer__horizontal-nav-link">有料職業紹介事業</a>
+        <span class="footer__horizontal-nav-divider">|</span>
+        <a href="../about/" class="footer__horizontal-nav-link">会社概要</a>
+        <span class="footer__horizontal-nav-divider">|</span>
+        <a href="../#contact" class="footer__horizontal-nav-link">お問い合わせ</a>
+        <span class="footer__horizontal-nav-divider">|</span>
+        <a href="../privacy/" class="footer__horizontal-nav-link">個人情報保護方針</a>
+      </nav>
+
+      <div class="footer__top footer__top--centered">
+        <!-- 会社情報 -->
+        <div class="footer__info">
+          <!-- ロゴ + 会社名 -->
+          <div class="footer__brand">
+            <div class="footer__logo">
+              <a href="../">
+              <div class="footer__logo-placeholder">
+                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                  <circle cx="8.5" cy="8.5" r="1.5"/>
+                  <polyline points="21 15 16 10 5 21"/>
+                </svg>
+              </div>
+              </a>
+            </div>
+            <div class="footer__company">
+              <h2 class="footer__company-name">株式会社 Synalis</h2>
+              <p class="footer__company-name-en">SYNALIS</p>
+            </div>
+          </div>
+
+          <!-- サービスタグ -->
+          <div class="footer__tags">
+            <span class="footer__tag">看護コンサルテーション事業</span>
+            <span class="footer__tag">人材紹介</span>
+          </div>
+
+          <!-- 住所 -->
+          <address class="footer__address">
+            <p class="footer__address-postal">〒000-0000 所在地（確認中）</p>
+          </address>
+
+          <!-- CTAボタン -->
+          <div class="footer__cta">
+            <a href="../#contact" class="footer__cta-btn footer__cta-btn--primary">
+              お問い合わせ
+            </a>
+            <a href="tel:000-0000-0000" class="footer__cta-btn footer__cta-btn--tel">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              000-0000-0000
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- コピーライト -->
+      <div class="footer__bottom">
+        <p class="footer__copyright">
+          &copy; 2026 株式会社 Synalis. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="../js/common.js"></script>
+  <script src="../js/hamburger.js"></script>
+
+  <!-- タブ切り替え -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const tabs = document.querySelectorAll('.recruit-contact__tab');
+      const panels = document.querySelectorAll('.recruit-contact__panel');
+
+      tabs.forEach(function(tab) {
+        tab.addEventListener('click', function() {
+          const targetPanel = this.getAttribute('data-tab');
+
+          // タブのアクティブ状態を切り替え
+          tabs.forEach(function(t) {
+            t.classList.remove('is-active');
+          });
+          this.classList.add('is-active');
+
+          // パネルの表示を切り替え
+          panels.forEach(function(panel) {
+            if (panel.getAttribute('data-panel') === targetPanel) {
+              panel.classList.add('is-active');
+            } else {
+              panel.classList.remove('is-active');
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

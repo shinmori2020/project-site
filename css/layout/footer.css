@@ -282,3 +282,22 @@
 .footer--top-page .footer__top--centered {
   display: block;
 }
+
+/* ========================================
+   Responsive - Footer
+   ======================================== */
+@media (max-width: 767px) {
+  .footer__horizontal-nav {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .footer__horizontal-nav-divider {
+    display: none;
+  }
+
+  .footer__horizontal-nav-link {
+    font-size: 14px;
+  }
+}

@@ -1027,7 +1027,7 @@
 .page-cta .btn--lg {
   padding: 16px 32px;
   font-size: 16px;
-  justify-content: space-between;
+  justify-content: center;
   min-width: 240px;
 }
 
