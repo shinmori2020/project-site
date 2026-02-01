@@ -19,6 +19,9 @@ function initHamburgerMenu() {
 
   if (!hamburger || !sideMenu) return;
 
+  // Fixed CTA element
+  const fixedCta = document.querySelector('.fixed-cta');
+
   // Open menu
   function openMenu() {
     hamburger.classList.add('active');
@@ -26,6 +29,10 @@ function initHamburgerMenu() {
     sideMenu.classList.add('active');
     sideMenu.setAttribute('aria-hidden', 'false');
     document.body.classList.add('menu-open');
+    // Hide fixed CTA when menu is open
+    if (fixedCta) {
+      fixedCta.classList.add('fixed-cta--hidden');
+    }
   }
 
   // Close menu
@@ -35,6 +42,10 @@ function initHamburgerMenu() {
     sideMenu.classList.remove('active');
     sideMenu.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('menu-open');
+    // Show fixed CTA when menu is closed
+    if (fixedCta) {
+      fixedCta.classList.remove('fixed-cta--hidden');
+    }
   }
 
   // Hamburger button click
