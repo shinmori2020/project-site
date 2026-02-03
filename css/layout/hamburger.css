@@ -107,18 +107,41 @@
   color: var(--primary-color);
 }
 
-/* Logo */
-.side-menu__logo {
+/* Brand (Logo + Company Name) */
+.side-menu__brand {
   display: flex;
   align-items: center;
+  gap: 12px;
   height: var(--header-height);
   padding: 0 24px;
   border-bottom: 1px solid var(--border-light);
 }
 
+.side-menu__logo {
+  display: block;
+}
+
 .side-menu__logo img {
   height: 40px;
   width: auto;
+}
+
+.side-menu__logo-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  color: var(--text-light);
+}
+
+.side-menu__company-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary-color);
+  white-space: nowrap;
 }
 
 /* Navigation */
@@ -213,6 +236,32 @@
   font-size: 15px;
   color: var(--text-light);
   cursor: default;
+}
+
+/* Contact Info */
+.side-menu__contact-info {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.side-menu__tel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.side-menu__tel svg {
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+.side-menu__address {
+  font-size: 12px;
+  color: var(--text-secondary);
 }
 
 /* CTA */

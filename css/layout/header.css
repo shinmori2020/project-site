@@ -12,7 +12,6 @@
   -webkit-backdrop-filter: blur(12px);
   z-index: 1000;
   transition: transform var(--transition-normal), opacity var(--transition-normal);
-  /* Initially hidden - slides up */
   transform: translateY(0);
   opacity: 1;
 }
@@ -26,41 +25,76 @@
 .header__inner {
   max-width: 100%;
   margin: 0 auto;
-  padding: 0 80px;
+  padding: 0 40px;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
 }
 
 /* ========================================
-   Logo
+   Brand (Logo + Company Name)
    ======================================== */
-.header__logo a {
+.header__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.header__logo {
   display: block;
 }
 
 .header__logo img {
-  height: 45px;
+  height: 40px;
   width: auto;
 }
 
-/* ========================================
-   Header Right (Nav + CTA)
-   ======================================== */
-.header__right {
+.header__logo-placeholder {
   display: flex;
   align-items: center;
-  gap: 32px;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  color: var(--text-light);
+}
+
+.header__logo-placeholder svg {
+  width: 36px;
+  height: 36px;
+}
+
+.header__company-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary-color);
+  white-space: nowrap;
+}
+
+/* ========================================
+   Right Area (Nav + Contact)
+   ======================================== */
+.header__right-area {
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
 
 /* ========================================
    Navigation
    ======================================== */
+.header__nav {
+  flex-shrink: 0;
+}
+
 .header__nav-list {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
 }
 
 .header__nav-item {
@@ -69,21 +103,95 @@
 
 .header__nav-link {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 4px;
-  padding: 8px 16px;
-  text-align: center;
-  transition: color var(--transition-fast);
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  border-radius: 6px;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
 }
 
 .header__nav-link:hover {
   color: var(--primary-color);
+  background: var(--primary-light);
 }
 
-.header__nav-link:hover .header__nav-icon {
+/* ========================================
+   Contact Section (Right)
+   ======================================== */
+.header__contact {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.header__contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--white);
+  background: var(--primary-color);
+  border-radius: 6px;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.header__contact-btn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.header__contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.header__tel {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  transition: color var(--transition-fast);
+}
+
+.header__tel:hover {
   color: var(--primary-color);
+}
+
+.header__tel svg {
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+.header__address {
+  font-size: 11px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+/* ========================================
+   Legacy Support (for other pages)
+   ======================================== */
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.header__cta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .header__nav-icon {
@@ -101,17 +209,12 @@
   white-space: nowrap;
 }
 
-.header__nav-link:hover .header__nav-text {
+.header__nav-link:hover .header__nav-icon {
   color: var(--primary-color);
 }
 
-/* ========================================
-   CTA Buttons
-   ======================================== */
-.header__cta {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+.header__nav-link:hover .header__nav-text {
+  color: var(--primary-color);
 }
 
 /* ========================================
@@ -158,4 +261,125 @@
   font-size: 14px;
   color: var(--text-light);
   cursor: default;
+}
+
+/* ========================================
+   Responsive - Large Desktop (min-width: 1200px)
+   ======================================== */
+@media (min-width: 1200px) {
+  .header__inner {
+    padding: 0 60px;
+  }
+}
+
+/* ========================================
+   Responsive - Medium Desktop (max-width: 1199px)
+   ======================================== */
+@media (max-width: 1199px) {
+  .header__inner {
+    padding: 0 30px;
+    gap: 16px;
+  }
+
+  .header__right-area {
+    gap: 16px;
+  }
+
+  .header__company-name {
+    font-size: 18px;
+  }
+
+  .header__logo-placeholder {
+    width: 50px;
+    height: 50px;
+  }
+
+  .header__logo-placeholder svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .header__nav-link {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .header__contact-btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .header__tel {
+    font-size: 13px;
+  }
+
+  .header__address {
+    font-size: 10px;
+  }
+}
+
+/* ========================================
+   Responsive - Tablet (max-width: 1023px)
+   ======================================== */
+@media (max-width: 1023px) {
+  .header__inner {
+    padding: 0 20px;
+  }
+
+  .header__brand {
+    gap: 8px;
+  }
+
+  .header__logo img {
+    height: 36px;
+  }
+
+  .header__logo-placeholder {
+    width: 44px;
+    height: 44px;
+  }
+
+  .header__logo-placeholder svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .header__company-name {
+    font-size: 16px;
+  }
+
+  /* Hide nav and contact on tablet - show hamburger */
+  .header__nav,
+  .header__contact,
+  .header__right,
+  .header__right-area {
+    display: none;
+  }
+}
+
+/* ========================================
+   Responsive - Mobile (max-width: 767px)
+   ======================================== */
+@media (max-width: 767px) {
+  .header__inner {
+    padding: 0 16px;
+  }
+
+  .header__logo img {
+    height: 32px;
+  }
+
+  .header__logo-placeholder {
+    width: 40px;
+    height: 40px;
+  }
+
+  .header__logo-placeholder svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .header__company-name {
+    font-size: 14px;
+  }
 }

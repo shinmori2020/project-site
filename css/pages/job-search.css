@@ -1,0 +1,554 @@
+/* ========================================
+   Job Search Page Styles
+   求人検索ページ
+   ======================================== */
+
+/* ========================================
+   Search Form
+   ======================================== */
+.search-form {
+  padding: 60px 0;
+  background: var(--white);
+}
+
+.search-form__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Basic Search */
+.search-form__basic {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: var(--shadow-lg);
+}
+
+.search-form__heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+}
+
+.search-form__heading svg {
+  color: var(--primary-color);
+}
+
+.search-form__basic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Form Field */
+.search-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.search-form__field--wide {
+  grid-column: 1 / -1;
+}
+
+.search-form__label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Select */
+.search-form__select-wrapper {
+  position: relative;
+}
+
+.search-form__select {
+  width: 100%;
+  padding: 14px 40px 14px 16px;
+  font-size: 15px;
+  color: var(--text-primary);
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  appearance: none;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.search-form__select:hover {
+  border-color: var(--primary-color);
+}
+
+.search-form__select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.search-form__select-icon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-light);
+  pointer-events: none;
+}
+
+/* Toggle Button */
+.search-form__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 24px;
+  padding: 16px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--primary-color);
+  background: var(--primary-light);
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.search-form__toggle:hover {
+  background: #D6EBFF;
+}
+
+.search-form__toggle-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search-form__toggle-icon {
+  transition: transform var(--transition-fast);
+}
+
+.search-form__toggle--active .search-form__toggle-icon {
+  transform: rotate(180deg);
+}
+
+/* Detail Search */
+.search-form__detail {
+  display: none;
+  margin-top: 24px;
+  padding: 32px;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+}
+
+.search-form__detail[aria-hidden="false"] {
+  display: block;
+}
+
+.search-form__detail-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* Checkbox Group */
+.search-form__checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.search-form__checkbox-group--tags {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Checkbox */
+.search-form__checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.search-form__checkbox input {
+  display: none;
+}
+
+.search-form__checkbox-mark {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--border-color);
+  border-radius: 4px;
+  position: relative;
+  transition: all var(--transition-fast);
+}
+
+.search-form__checkbox input:checked + .search-form__checkbox-mark {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.search-form__checkbox input:checked + .search-form__checkbox-mark::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--white);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.search-form__checkbox-text {
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+/* Tag Style Checkbox */
+.search-form__checkbox--tag {
+  display: inline-flex;
+}
+
+.search-form__checkbox-tag {
+  padding: 8px 16px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  transition: all var(--transition-fast);
+}
+
+.search-form__checkbox--tag:hover .search-form__checkbox-tag {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.search-form__checkbox--tag input:checked + .search-form__checkbox-tag {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--white);
+}
+
+/* Actions */
+.search-form__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.search-form__clear {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.search-form__clear:hover {
+  color: var(--text-primary);
+  border-color: var(--text-secondary);
+}
+
+.search-form__submit {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--white);
+  background: var(--primary-color);
+  border-radius: 8px;
+  transition: all var(--transition-fast);
+}
+
+.search-form__submit:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ========================================
+   Popular Search
+   ======================================== */
+.popular-search {
+  padding: 60px 0;
+  background: var(--bg-secondary);
+}
+
+.popular-search__inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.popular-search__title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.popular-search__tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.popular-search__tag {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: var(--primary-color);
+  background: var(--white);
+  border: 1px solid var(--primary-color);
+  border-radius: 24px;
+  transition: all var(--transition-fast);
+}
+
+.popular-search__tag:hover {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+/* ========================================
+   Area Search
+   ======================================== */
+.area-search {
+  padding: 60px 0 80px;
+  background: var(--white);
+}
+
+.area-search__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.area-search__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.area-search__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.area-search__region {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.area-search__region-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.area-search__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+
+.area-search__list li a {
+  font-size: 14px;
+  color: var(--text-primary);
+  transition: color var(--transition-fast);
+}
+
+.area-search__list li a:hover {
+  color: var(--primary-color);
+}
+
+/* ========================================
+   Responsive - Tablet (max-width: 1023px)
+   ======================================== */
+@media (max-width: 1023px) {
+  .search-form__inner {
+    padding: 0 24px;
+  }
+
+  .search-form__basic-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .search-form__detail-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .area-search__inner {
+    padding: 0 24px;
+  }
+
+  .area-search__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .popular-search__inner {
+    padding: 0 24px;
+  }
+}
+
+/* ========================================
+   Responsive - Mobile (max-width: 767px)
+   ======================================== */
+@media (max-width: 767px) {
+  .search-form {
+    padding: 40px 0;
+  }
+
+  .search-form__inner {
+    padding: 0 16px;
+  }
+
+  .search-form__basic {
+    padding: 24px 20px;
+    border-radius: 12px;
+  }
+
+  .search-form__heading {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .search-form__basic-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .search-form__select {
+    padding: 12px 36px 12px 14px;
+    font-size: 14px;
+  }
+
+  .search-form__toggle {
+    padding: 14px 16px;
+    font-size: 14px;
+  }
+
+  .search-form__detail {
+    padding: 24px 20px;
+  }
+
+  .search-form__detail-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .search-form__checkbox-group {
+    gap: 10px;
+  }
+
+  .search-form__checkbox-group--tags {
+    gap: 8px;
+  }
+
+  .search-form__checkbox-tag {
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+
+  .search-form__actions {
+    flex-direction: column-reverse;
+    gap: 12px;
+  }
+
+  .search-form__clear {
+    width: 100%;
+    justify-content: center;
+    padding: 12px;
+  }
+
+  .search-form__submit {
+    width: 100%;
+    justify-content: center;
+    padding: 14px;
+    font-size: 15px;
+  }
+
+  .popular-search {
+    padding: 40px 0;
+  }
+
+  .popular-search__inner {
+    padding: 0 20px;
+  }
+
+  .popular-search__title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .popular-search__tags {
+    gap: 8px;
+  }
+
+  .popular-search__tag {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .area-search {
+    padding: 40px 0 60px;
+  }
+
+  .area-search__inner {
+    padding: 0 20px;
+  }
+
+  .area-search__title {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  .area-search__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .area-search__region {
+    padding: 20px;
+  }
+
+  .area-search__region-title {
+    font-size: 15px;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+  }
+
+  .area-search__list {
+    gap: 6px 12px;
+  }
+
+  .area-search__list li a {
+    font-size: 13px;
+  }
+}

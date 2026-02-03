@@ -1,0 +1,802 @@
+/* ========================================
+   Job List Page Styles
+   求人一覧ページ
+   ======================================== */
+
+/* ========================================
+   Breadcrumb
+   ======================================== */
+.breadcrumb {
+  padding: 100px 0 20px;
+  background: var(--white);
+}
+
+.breadcrumb__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.breadcrumb__list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 13px;
+  list-style: none;
+}
+
+.breadcrumb__link {
+  color: var(--primary-color);
+  transition: opacity var(--transition-fast);
+}
+
+.breadcrumb__link:hover {
+  opacity: 0.7;
+}
+
+.breadcrumb__separator {
+  color: var(--text-light);
+}
+
+.breadcrumb__current {
+  color: var(--text-primary);
+}
+
+/* ========================================
+   Job List Header
+   ======================================== */
+.job-list-header {
+  background: var(--white);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.job-list-header__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.job-list-header__info {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.job-list-header__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.job-list-header__count {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.job-list-header__count-num {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.job-list-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.job-list-header__filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--primary-color);
+  background: var(--white);
+  border: 1px solid var(--primary-color);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.job-list-header__filter-btn:hover {
+  background: var(--primary-light);
+}
+
+.job-list-header__sort {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.job-list-header__sort-select {
+  padding: 8px 12px;
+  font-size: 14px;
+  color: var(--text-primary);
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Tags */
+.job-list-header__tags {
+  background: var(--bg-secondary);
+  padding: 12px 0;
+}
+
+.job-list-header__tags-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.job-list-header__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  font-size: 13px;
+  color: var(--text-primary);
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+}
+
+.job-list-header__tag button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  font-size: 14px;
+  color: var(--text-light);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.job-list-header__tag button:hover {
+  color: var(--text-primary);
+}
+
+.job-list-header__clear-all {
+  font-size: 13px;
+  color: var(--primary-color);
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.job-list-header__clear-all:hover {
+  text-decoration: underline;
+}
+
+/* ========================================
+   Job List
+   ======================================== */
+.job-list {
+  padding: 40px 0 80px;
+  background: var(--bg-secondary);
+}
+
+.job-list__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ========================================
+   Job Card
+   ======================================== */
+.job-card {
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 20px;
+  transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+
+.job-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.job-card__link {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+}
+
+.job-card__image {
+  flex-shrink: 0;
+  width: 240px;
+}
+
+.job-card__image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  background: var(--bg-secondary);
+  color: var(--text-light);
+}
+
+.job-card__content {
+  flex: 1;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.job-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.job-card__tag {
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--primary-color);
+  background: var(--primary-light);
+  border-radius: 4px;
+}
+
+.job-card__tag--type {
+  color: var(--white);
+  background: var(--primary-color);
+}
+
+.job-card__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.job-card__position {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.job-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.job-card__info-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.job-card__info-row svg {
+  flex-shrink: 0;
+  color: var(--text-light);
+}
+
+.job-card__info-row strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.job-card__description {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ========================================
+   Pagination
+   ======================================== */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 40px;
+}
+
+.pagination__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  padding: 0 12px;
+  font-size: 14px;
+  color: var(--text-primary);
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  transition: all var(--transition-fast);
+}
+
+.pagination__link:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.pagination__link--active {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--white);
+}
+
+.pagination__link--active:hover {
+  background: var(--primary-hover);
+  color: var(--white);
+}
+
+.pagination__link--prev,
+.pagination__link--next {
+  padding: 0;
+}
+
+.pagination__ellipsis {
+  padding: 0 8px;
+  color: var(--text-light);
+}
+
+/* ========================================
+   Filter Modal
+   ======================================== */
+.filter-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-fast), visibility var(--transition-fast);
+}
+
+.filter-modal[aria-hidden="false"] {
+  opacity: 1;
+  visibility: visible;
+}
+
+.filter-modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.filter-modal__content {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  background: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(20px);
+  transition: transform var(--transition-fast);
+}
+
+.filter-modal[aria-hidden="false"] .filter-modal__content {
+  transform: translateY(0);
+}
+
+.filter-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.filter-modal__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.filter-modal__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: background var(--transition-fast);
+}
+
+.filter-modal__close:hover {
+  background: var(--bg-secondary);
+}
+
+.filter-modal__body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px;
+}
+
+.filter-modal__field {
+  margin-bottom: 24px;
+}
+
+.filter-modal__field:last-child {
+  margin-bottom: 0;
+}
+
+.filter-modal__label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.filter-modal__select-wrapper {
+  position: relative;
+}
+
+.filter-modal__select {
+  width: 100%;
+  padding: 12px 40px 12px 14px;
+  font-size: 14px;
+  color: var(--text-primary);
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  appearance: none;
+}
+
+.filter-modal__select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.filter-modal__select-icon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-light);
+  pointer-events: none;
+}
+
+.filter-modal__checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.filter-modal__checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.filter-modal__checkbox input {
+  display: none;
+}
+
+.filter-modal__checkbox-mark {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--border-color);
+  border-radius: 4px;
+  position: relative;
+  transition: all var(--transition-fast);
+}
+
+.filter-modal__checkbox input:checked + .filter-modal__checkbox-mark {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.filter-modal__checkbox input:checked + .filter-modal__checkbox-mark::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 9px;
+  border: solid var(--white);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.filter-modal__checkbox-text {
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.filter-modal__footer {
+  display: flex;
+  gap: 12px;
+  padding: 20px 24px;
+  border-top: 1px solid var(--border-color);
+}
+
+.filter-modal__clear {
+  flex: 1;
+  padding: 14px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-modal__clear:hover {
+  border-color: var(--text-secondary);
+  color: var(--text-primary);
+}
+
+.filter-modal__submit {
+  flex: 2;
+  padding: 14px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--white);
+  background: var(--primary-color);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-modal__submit:hover {
+  background: var(--primary-hover);
+}
+
+/* ========================================
+   Responsive - Tablet (max-width: 1023px)
+   ======================================== */
+@media (max-width: 1023px) {
+  .breadcrumb {
+    padding: 90px 0 16px;
+  }
+
+  .breadcrumb__inner {
+    padding: 0 24px;
+  }
+
+  .job-list-header__inner {
+    padding: 20px 24px;
+  }
+
+  .job-list-header__tags-inner {
+    padding: 0 24px;
+  }
+
+  .job-list__inner {
+    padding: 0 24px;
+  }
+
+  .job-card__image {
+    width: 200px;
+  }
+}
+
+/* ========================================
+   Responsive - Mobile (max-width: 767px)
+   ======================================== */
+@media (max-width: 767px) {
+  .breadcrumb {
+    padding: 80px 0 12px;
+  }
+
+  .breadcrumb__inner {
+    padding: 0 20px;
+  }
+
+  .breadcrumb__list {
+    font-size: 12px;
+    gap: 4px;
+  }
+
+  .job-list-header__inner {
+    padding: 16px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .job-list-header__info {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .job-list-header__title {
+    font-size: 20px;
+  }
+
+  .job-list-header__actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .job-list-header__filter-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .job-list-header__sort {
+    font-size: 13px;
+  }
+
+  .job-list-header__sort-select {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+
+  .job-list-header__tags-inner {
+    padding: 0 20px;
+    gap: 6px;
+  }
+
+  .job-list-header__tag {
+    padding: 4px 10px;
+    font-size: 12px;
+  }
+
+  .job-list {
+    padding: 24px 0 60px;
+  }
+
+  .job-list__inner {
+    padding: 0 16px;
+  }
+
+  .job-card {
+    margin-bottom: 16px;
+  }
+
+  .job-card__link {
+    flex-direction: column;
+  }
+
+  .job-card__image {
+    width: 100%;
+    height: 160px;
+  }
+
+  .job-card__image-placeholder {
+    min-height: 160px;
+  }
+
+  .job-card__content {
+    padding: 16px;
+  }
+
+  .job-card__tags {
+    margin-bottom: 10px;
+  }
+
+  .job-card__tag {
+    padding: 3px 8px;
+    font-size: 10px;
+  }
+
+  .job-card__title {
+    font-size: 16px;
+  }
+
+  .job-card__position {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  .job-card__info {
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+
+  .job-card__info-row {
+    font-size: 13px;
+    gap: 6px;
+  }
+
+  .job-card__info-row svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .job-card__description {
+    font-size: 12px;
+  }
+
+  .pagination {
+    gap: 6px;
+    margin-top: 32px;
+  }
+
+  .pagination__link {
+    min-width: 36px;
+    height: 36px;
+    font-size: 13px;
+  }
+
+  /* Filter Modal Mobile */
+  .filter-modal__content {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 0;
+    height: 100%;
+  }
+
+  .filter-modal__header {
+    padding: 16px 20px;
+  }
+
+  .filter-modal__title {
+    font-size: 16px;
+  }
+
+  .filter-modal__body {
+    padding: 20px;
+  }
+
+  .filter-modal__field {
+    margin-bottom: 20px;
+  }
+
+  .filter-modal__checkbox-group {
+    gap: 10px;
+  }
+
+  .filter-modal__footer {
+    padding: 16px 20px;
+  }
+
+  .filter-modal__clear,
+  .filter-modal__submit {
+    padding: 12px 16px;
+    font-size: 13px;
+  }
+}
