@@ -49,10 +49,13 @@
         <nav class="header__nav">
           <ul class="header__nav-list">
             <li class="header__nav-item">
-              <a href="consultation/" class="header__nav-link">看護コンサル</a>
+              <a href="consultation/" class="header__nav-link">看護コンサルテーション</a>
             </li>
             <li class="header__nav-item">
-              <a href="recruitment/" class="header__nav-link">人材紹介</a>
+              <a href="literature/" class="header__nav-link">文献検索代行サービス</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="recruitment/" class="header__nav-link">人材紹介・転職支援サービス</a>
             </li>
             <li class="header__nav-item">
               <a href="about/" class="header__nav-link">会社概要</a>
@@ -62,16 +65,16 @@
 
         <!-- 問い合わせ + 電話 + 住所 -->
         <div class="header__contact">
-          <a href="#contact" class="header__contact-btn">お問い合わせ</a>
-          <div class="header__contact-info">
-            <a href="tel:000-0000-0000" class="header__tel">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <div class="header__contact-buttons">
+            <a href="#contact" class="header__contact-btn">お問い合わせ</a>
+            <a href="tel:000-0000-0000" class="header__contact-btn header__contact-btn--tel">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
               </svg>
               <span>000-0000-0000</span>
             </a>
-            <p class="header__address">〒000-0000 所在地（確認中）</p>
           </div>
+          <p class="header__address">大阪府大阪市都島区</p>
         </div>
       </div>
 
@@ -120,30 +123,29 @@
             <a href="./" class="side-menu__link">TOP</a>
           </li>
           <li class="side-menu__item">
-            <a href="consultation/" class="side-menu__link">看護コンサル</a>
+            <a href="consultation/" class="side-menu__link">看護コンサルテーション</a>
           </li>
           <li class="side-menu__item">
-            <a href="recruitment/" class="side-menu__link">人材紹介</a>
+            <a href="literature/" class="side-menu__link">文献検索代行サービス</a>
+          </li>
+          <li class="side-menu__item">
+            <a href="recruitment/" class="side-menu__link">人材紹介・転職支援サービス</a>
           </li>
           <li class="side-menu__item">
             <a href="about/" class="side-menu__link">会社概要</a>
           </li>
         </ul>
 
-        <!-- 連絡先情報 -->
-        <div class="side-menu__contact-info">
-          <a href="tel:000-0000-0000" class="side-menu__tel">
+        <!-- CTAボタン・連絡先情報 -->
+        <div class="side-menu__contact-area">
+          <a href="#contact" class="side-menu__btn side-menu__btn--primary">お問い合わせ</a>
+          <a href="tel:000-0000-0000" class="side-menu__btn side-menu__btn--tel">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
             </svg>
             <span>000-0000-0000</span>
           </a>
-          <p class="side-menu__address">〒000-0000 所在地（確認中）</p>
-        </div>
-
-        <!-- CTAボタン -->
-        <div class="side-menu__cta">
-          <a href="#contact" class="btn btn--primary btn--block">お問い合わせ</a>
+          <p class="side-menu__address">大阪府大阪市都島区</p>
         </div>
       </nav>
     </div>
@@ -163,9 +165,15 @@
             <img src="images/hero_slide_02.jpg" alt="メインビジュアル2">
           </div>
         </div>
-        <!-- キャッチコピー -->
+        <!-- キャッチコピー（左下） -->
         <div class="hero-v2__copy">
-          <h1 class="hero-v2__title">人を守り、現場を守り、経営を守る。</h1>
+          <h1 class="hero-v2__title">医療・研究・人材の未来に、シナジーを。<br>経営の課題を、人材と創造の力で解決する。</h1>
+          <!-- SP用リードテキスト -->
+          <p class="hero-v2__lead sp-only">「専門看護師（CNS）と図書司書が連携する唯一の支援体制」</p>
+        </div>
+        <!-- リードテキスト（右下・PC用） -->
+        <div class="hero-v2__lead-right pc-only">
+          <p class="hero-v2__lead">「専門看護師（CNS）と図書司書が連携する唯一の支援体制」</p>
         </div>
       </div>
 
@@ -174,11 +182,12 @@
         <nav class="hero-v2__nav">
           <a href="consultation/" class="hero-v2__nav-box">
             <span class="hero-v2__nav-name">Synalis Research Consulting</span>
-            <span class="hero-v2__nav-sub">（看護支援事業）</span>
+            <span class="hero-v2__nav-sub">（看護コンサルテーションサービス）</span>
+            <span class="hero-v2__nav-sub">（文献検索代行サービス）</span>
           </a>
           <a href="recruitment/" class="hero-v2__nav-box">
             <span class="hero-v2__nav-name">シナリス・エージェント</span>
-            <span class="hero-v2__nav-sub">（有料職業紹介）</span>
+            <span class="hero-v2__nav-sub">（人材紹介サービス・転職支援サービス）</span>
           </a>
           <a href="about/" class="hero-v2__nav-box">
             <span class="hero-v2__nav-name">会社概要</span>
@@ -210,23 +219,23 @@
             <!-- ニュース項目1 -->
             <li class="news__item">
               <a href="/news/001/" class="news__link">
-                <time class="news__date" datetime="2026-01-20">2026.01.20</time>
-                <span class="news__tag news__tag--info">お知らせ</span>
-                <span class="news__text">仮のお知らせテキストです。</span>
+                <time class="news__date" datetime="2026-02-27">2026.02.27</time>
+                <span class="news__tag news__tag--service">サービス</span>
+                <span class="news__text">看護コンサルテーションサービス 専門看護師のウェビナー開催「離職を防ぎ組織を好循環へ導く方略」</span>
               </a>
             </li>
             <!-- ニュース項目2 -->
             <li class="news__item">
               <a href="/news/002/" class="news__link">
-                <time class="news__date" datetime="2026-01-15">2026.01.15</time>
-                <span class="news__tag news__tag--service">サービス</span>
-                <span class="news__text">仮のお知らせテキストです。</span>
+                <time class="news__date" datetime="2026-02-01">2026.02.01</time>
+                <span class="news__tag news__tag--info">お知らせ</span>
+                <span class="news__text">人材紹介サービス 有料職業紹介事業 認可取得 27-ユ-3053</span>
               </a>
             </li>
             <!-- ニュース項目3 -->
             <li class="news__item">
               <a href="/news/003/" class="news__link">
-                <time class="news__date" datetime="2026-01-10">2026.01.10</time>
+                <time class="news__date" datetime="2026-01-20">2026.01.20</time>
                 <span class="news__tag news__tag--info">お知らせ</span>
                 <span class="news__text">仮のお知らせテキストです。</span>
               </a>
@@ -248,292 +257,54 @@
       </div>
     </section>
 
-    <!-- ABOUT USセクション -->
-    <section class="about" id="about">
-      <div class="about__inner">
-        <!-- ロゴイラスト -->
-        <div class="about__logo">
-          <div class="about__logo-placeholder">
-            <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-              <circle cx="8.5" cy="8.5" r="1.5"/>
-              <polyline points="21 15 16 10 5 21"/>
-            </svg>
-            <span>ロゴイラスト</span>
-          </div>
-        </div>
-
-        <!-- セクションラベル -->
-        <div class="about__label">
-          <span class="about__label-line"></span>
-          <span class="about__label-text">ABOUT US</span>
-          <span class="about__label-line"></span>
-        </div>
-
-        <!-- キャッチコピー -->
-        <h2 class="about__title">
-          仮の見出しです。<br>
-          仮の見出しです。
-        </h2>
-
-        <!-- 説明文 -->
-        <div class="about__text">
-          <p>
-            仮のテキストです。仮のテキストです。<br>
-            仮のテキストです。仮のテキストです。<br>
-            仮のテキストです。仮のテキストです。
-          </p>
-          <p>
-            仮のテキストです。仮のテキストです。<br>
-            仮のテキストです。仮のテキストです。<br>
-            仮のテキストです。仮のテキストです。
-          </p>
-          <p class="about__text-highlight">
-            仮のテキストです。仮のテキストです。
-          </p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- 特徴セクション -->
-    <section class="feature" id="feature">
-      <div class="feature__inner">
+    <!-- サービス紹介セクション -->
+    <section class="service-intro" id="service">
+      <div class="service-intro__inner">
         <!-- セクションヘッダー -->
-        <div class="feature__header">
-          <div class="feature__icon">
+        <div class="service-intro__header">
+          <div class="service-intro__icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
               <path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z"/>
             </svg>
           </div>
-          <h2 class="feature__title">私たちの特徴</h2>
-          <span class="feature__title-en">FEATURE</span>
+          <h2 class="service-intro__title">サービス紹介</h2>
+          <span class="service-intro__title-en">SERVICE</span>
         </div>
 
-        <!-- 特徴カード -->
-        <div class="feature__grid">
-          <!-- 特徴1 -->
-          <article class="feature-card">
-            <div class="feature-card__image">
-              <div class="feature-card__image-placeholder">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                  <circle cx="8.5" cy="8.5" r="1.5"/>
-                  <polyline points="21 15 16 10 5 21"/>
-                </svg>
-              </div>
+        <!-- サービスカード -->
+        <div class="service-intro__grid">
+          <!-- サービス1: 看護コンサルテーションサービス -->
+          <a href="consultation/" class="service-intro-card">
+            <div class="service-intro-card__image">
+              <img src="images/top_image_01.jpeg" alt="看護コンサルテーションサービス">
             </div>
-            <h3 class="feature-card__title">仮の見出しです。</h3>
-            <p class="feature-card__text">
-              仮のテキストです。仮のテキストです。仮のテキストです。仮のテキストです。仮のテキストです。
+            <h3 class="service-intro-card__title">看護コンサルテーションサービス</h3>
+            <p class="service-intro-card__text">
+              CNS(専門看護師)が看護師の定着を支援する為の各種サービスです
             </p>
-          </article>
-
-          <!-- 特徴2 -->
-          <article class="feature-card">
-            <div class="feature-card__image">
-              <div class="feature-card__image-placeholder">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                  <circle cx="8.5" cy="8.5" r="1.5"/>
-                  <polyline points="21 15 16 10 5 21"/>
-                </svg>
-              </div>
-            </div>
-            <h3 class="feature-card__title">仮の見出しです。</h3>
-            <p class="feature-card__text">
-              仮のテキストです。仮のテキストです。仮のテキストです。仮のテキストです。仮のテキストです。
-            </p>
-          </article>
-
-          <!-- 特徴3 -->
-          <article class="feature-card">
-            <div class="feature-card__image">
-              <div class="feature-card__image-placeholder">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                  <circle cx="8.5" cy="8.5" r="1.5"/>
-                  <polyline points="21 15 16 10 5 21"/>
-                </svg>
-              </div>
-            </div>
-            <h3 class="feature-card__title">仮の見出しです。</h3>
-            <p class="feature-card__text">
-              仮のテキストです。仮のテキストです。仮のテキストです。仮のテキストです。仮のテキストです。
-            </p>
-          </article>
-        </div>
-      </div>
-
-      <!-- CTAボタン -->
-      <div class="feature__cta">
-        <a href="research/" class="feature__cta-link">
-          研究支援事業
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-        </a>
-        <a href="recruitment/" class="feature__cta-link feature__cta-link--outline">
-          人材紹介事業
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-            <polyline points="15 3 21 3 21 9"/>
-            <line x1="10" y1="14" x2="21" y2="3"/>
-          </svg>
-        </a>
-      </div>
-
-      <!-- 背景装飾 -->
-      <div class="feature__bg">
-        <div class="feature__bg-leaf feature__bg-leaf--right"></div>
-      </div>
-    </section>
-
-    <!-- サービス案内セクション -->
-    <section class="service-info" id="service-info">
-      <div class="service-info__inner">
-        <!-- 左側: タイトル・説明・ボタン -->
-        <div class="service-info__left">
-          <div class="service-info__header">
-            <div class="service-info__icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z"/>
-              </svg>
-            </div>
-            <h2 class="service-info__title">サービス案内</h2>
-            <span class="service-info__title-en">SERVICE INFORMATION</span>
-          </div>
-
-          <div class="service-info__text">
-            <p>
-              仮のテキストです。仮のテキストです。仮のテキストです。仮のテキストです。仮のテキストです。仮のテキストです。仮のテキストです。
-            </p>
-          </div>
-
-          <a href="/services/" class="service-info__btn">
-            詳しくみる
-            <span class="service-info__btn-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-              </svg>
-            </span>
           </a>
-        </div>
 
-        <!-- 右側: サービスカードグリッド -->
-        <div class="service-info__right">
-          <div class="service-info__grid">
-            <!-- カード1 -->
-            <a href="research/" class="service-info-card">
-              <div class="service-info-card__icon">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <circle cx="11" cy="11" r="8"/>
-                  <path d="M21 21l-4.35-4.35"/>
-                  <path d="M11 8v6M8 11h6"/>
-                </svg>
-              </div>
-              <div class="service-info-card__bottom">
-                <span class="service-info-card__title">研究支援</span>
-                <span class="service-info-card__arrow">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                  </svg>
-                </span>
-              </div>
-            </a>
+          <!-- サービス2: 文献検索代行サービス -->
+          <a href="literature/" class="service-intro-card">
+            <div class="service-intro-card__image">
+              <img src="images/top_image_02.jpeg" alt="文献検索代行サービス">
+            </div>
+            <h3 class="service-intro-card__title">文献検索代行サービス</h3>
+            <p class="service-intro-card__text">
+              医療文献に精通した図書司書が、膨大なデータベースから必要な情報を的確に抽出します。
+            </p>
+          </a>
 
-            <!-- カード2 -->
-            <a href="recruitment/" class="service-info-card">
-              <div class="service-info-card__icon">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                  <circle cx="9" cy="7" r="4"/>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                </svg>
-              </div>
-              <div class="service-info-card__bottom">
-                <span class="service-info-card__title">人材紹介</span>
-                <span class="service-info-card__arrow">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                  </svg>
-                </span>
-              </div>
-            </a>
-
-            <!-- カード3 -->
-            <a href="/consulting/" class="service-info-card">
-              <div class="service-info-card__icon">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                  <path d="M8 10h8M8 14h4"/>
-                </svg>
-              </div>
-              <div class="service-info-card__bottom">
-                <span class="service-info-card__title">コンサルティング</span>
-                <span class="service-info-card__arrow">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                  </svg>
-                </span>
-              </div>
-            </a>
-
-            <!-- カード4 -->
-            <a href="/training/" class="service-info-card">
-              <div class="service-info-card__icon">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
-                  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
-                </svg>
-              </div>
-              <div class="service-info-card__bottom">
-                <span class="service-info-card__title">研修・教育</span>
-                <span class="service-info-card__arrow">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                  </svg>
-                </span>
-              </div>
-            </a>
-
-            <!-- カード5 -->
-            <a href="/analysis/" class="service-info-card">
-              <div class="service-info-card__icon">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M18 20V10M12 20V4M6 20v-6"/>
-                </svg>
-              </div>
-              <div class="service-info-card__bottom">
-                <span class="service-info-card__title">データ分析</span>
-                <span class="service-info-card__arrow">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                  </svg>
-                </span>
-              </div>
-            </a>
-
-            <!-- カード6 -->
-            <a href="/support/" class="service-info-card">
-              <div class="service-info-card__icon">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <circle cx="12" cy="12" r="10"/>
-                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
-                  <path d="M12 17h.01"/>
-                </svg>
-              </div>
-              <div class="service-info-card__bottom">
-                <span class="service-info-card__title">サポート</span>
-                <span class="service-info-card__arrow">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                  </svg>
-                </span>
-              </div>
-            </a>
-          </div>
+          <!-- サービス3: 人材紹介・転職支援 -->
+          <a href="recruitment/" class="service-intro-card">
+            <div class="service-intro-card__image">
+              <img src="images/top_image_03.jpeg" alt="人材紹介・転職支援">
+            </div>
+            <h3 class="service-intro-card__title">人材紹介・転職支援</h3>
+            <p class="service-intro-card__text">
+              医療関係を中心にあなたの要望にあったお仕事を紹介します。
+            </p>
+          </a>
         </div>
       </div>
     </section>
@@ -544,7 +315,7 @@
         <div class="section__header">
           <span class="section__label">CONTACT</span>
           <h2 class="section__title">お問い合わせ</h2>
-          <p class="section__subtitle">仮のテキストです。<br class="sp-only">仮のテキストです。</p>
+          <p class="section__subtitle">ご不明点やご要望がございましたら、<br class="sp-only">お気軽にお申し付けください。</p>
         </div>
 
         <div class="contact__content">
@@ -721,9 +492,11 @@
       <nav class="footer__horizontal-nav">
         <a href="./" class="footer__horizontal-nav-link">トップページ</a>
         <span class="footer__horizontal-nav-divider">|</span>
-        <a href="consultation/" class="footer__horizontal-nav-link">看護支援事業</a>
+        <a href="consultation/" class="footer__horizontal-nav-link">看護コンサルテーション</a>
         <span class="footer__horizontal-nav-divider">|</span>
-        <a href="recruitment/" class="footer__horizontal-nav-link">有料職業紹介事業</a>
+        <a href="literature/" class="footer__horizontal-nav-link">文献検索代行サービス</a>
+        <span class="footer__horizontal-nav-divider">|</span>
+        <a href="recruitment/" class="footer__horizontal-nav-link">人材紹介・転職支援サービス</a>
         <span class="footer__horizontal-nav-divider">|</span>
         <a href="about/" class="footer__horizontal-nav-link">会社概要</a>
         <span class="footer__horizontal-nav-divider">|</span>
@@ -754,15 +527,9 @@
             </div>
           </div>
 
-          <!-- サービスタグ -->
-          <div class="footer__tags">
-            <span class="footer__tag">看護コンサルテーション事業</span>
-            <span class="footer__tag">人材紹介</span>
-          </div>
-
           <!-- 住所 -->
           <address class="footer__address">
-            <p class="footer__address-postal">〒000-0000 所在地（確認中）</p>
+            <p class="footer__address-postal">大阪府大阪市都島区</p>
           </address>
 
           <!-- CTAボタン（ヘッダーと同じスタイル） -->

@@ -314,7 +314,7 @@
 .philosophy__left {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   padding-top: 40px;
 }
 
@@ -346,6 +346,61 @@
   letter-spacing: 0.15em;
 }
 
+/* Vision & Value Area */
+.philosophy__vision-value {
+  margin-top: 48px;
+  text-align: center;
+}
+
+.philosophy__vision {
+  margin-bottom: 32px;
+}
+
+.philosophy__value {
+  /* Value section */
+}
+
+.philosophy__vv-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 12px;
+}
+
+.philosophy__vv-text {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--primary-color);
+}
+
+.philosophy__value-list {
+  list-style: none;
+  text-align: center;
+}
+
+.philosophy__value-item {
+  margin-bottom: 20px;
+}
+
+.philosophy__value-item:last-child {
+  margin-bottom: 0;
+}
+
+.philosophy__value-name {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 4px;
+}
+
+.philosophy__value-desc {
+  display: block;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--primary-color);
+}
+
 /* Philosophy Right (Cards Area) */
 .philosophy__right {
   /* Cards container */
@@ -375,9 +430,8 @@
 
 .philosophy__card {
   display: flex;
-  align-items: center;
-  gap: 24px;
-  padding: 28px 32px;
+  flex-direction: column;
+  padding: 24px 28px;
   background: var(--white);
   border-radius: 12px;
   border: 1px solid var(--border-light);
@@ -388,29 +442,67 @@
   box-shadow: var(--shadow-sm);
 }
 
+.philosophy__card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
 .philosophy__card-number {
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 52px;
-  height: 52px;
+  width: 44px;
+  height: 44px;
   background: var(--primary-color);
   color: var(--white);
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
-  border-radius: 12px;
+  border-radius: 10px;
 }
 
-.philosophy__card-content {
-  flex: 1;
+.philosophy__card-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary-color);
 }
 
 .philosophy__card-text {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+
+.philosophy__card-value-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.philosophy__card-value-list li {
+  margin-bottom: 12px;
+}
+
+.philosophy__card-value-list li:last-child {
+  margin-bottom: 0;
+}
+
+.philosophy__card-value-name {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 2px;
+}
+
+.philosophy__card-value-desc {
+  display: block;
+  font-size: 14px;
+  line-height: 1.6;
   color: var(--text-primary);
-  font-weight: 500;
 }
 
 /* ========================================
@@ -1153,17 +1245,26 @@
   }
 
   .philosophy__card {
-    padding: 24px;
+    padding: 20px 24px;
+  }
+
+  .philosophy__card-header {
+    gap: 14px;
+    margin-bottom: 10px;
   }
 
   .philosophy__card-number {
-    width: 46px;
-    height: 46px;
-    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .philosophy__card-title {
+    font-size: 18px;
   }
 
   .philosophy__card-text {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   /* Features */
@@ -1386,6 +1487,26 @@
     align-items: center;
   }
 
+  .philosophy__vision-value {
+    margin-top: 32px;
+  }
+
+  .philosophy__vv-title {
+    font-size: 16px;
+  }
+
+  .philosophy__vv-text {
+    font-size: 14px;
+  }
+
+  .philosophy__value-name {
+    font-size: 15px;
+  }
+
+  .philosophy__value-desc {
+    font-size: 13px;
+  }
+
   .philosophy__icon svg {
     width: 40px;
     height: 40px;
@@ -1404,20 +1525,28 @@
     gap: 16px;
   }
 
+  .philosophy__card {
+    padding: 16px 20px;
+  }
+
+  .philosophy__card-header {
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+
   .philosophy__card-number {
-    width: 44px;
-    height: 44px;
-    font-size: 18px;
-    border-radius: 10px;
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+    border-radius: 8px;
   }
 
   .philosophy__card-title {
-    text-align: left;
+    font-size: 16px;
   }
 
   .philosophy__card-text {
-    font-size: 14px;
-    text-align: left;
+    font-size: 13px;
   }
 
   /* Features */

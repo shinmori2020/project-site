@@ -129,6 +129,38 @@
     0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* リードテキスト（右下配置） */
+.hero-v2__lead-right {
+  position: absolute;
+  bottom: 60px;
+  right: 50px;
+  opacity: 0;
+  transform: translateX(30px);
+  animation: slideInFromRight 1s ease-out 0.7s forwards;
+}
+
+.hero-v2__lead {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.08em;
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.4),
+    0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* フェードイン + 右からスライドアニメーション */
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 /* ナビゲーションボックス */
 .hero-v2__nav-wrapper {
   width: 100%;
@@ -204,6 +236,18 @@
   }
 }
 
+/* ナビゲーションボックス - レスポンシブ - タブレット (リードテキスト) */
+@media (max-width: 1023px) {
+  .hero-v2__lead-right {
+    bottom: 40px;
+    right: 30px;
+  }
+
+  .hero-v2__lead {
+    font-size: 20px;
+  }
+}
+
 /* ナビゲーションボックス - レスポンシブ - モバイル */
 @media (max-width: 767px) {
   .hero-v2__slider {
@@ -221,6 +265,11 @@
   .hero-v2__title {
     font-size: 18px;
     letter-spacing: 0.08em;
+  }
+
+  .hero-v2__copy .hero-v2__lead {
+    margin-top: 12px;
+    font-size: 14px;
   }
 
   .hero-v2__nav {
@@ -1200,6 +1249,174 @@
 .feature__cta-link--outline:hover {
   background: var(--primary-color);
   color: var(--white);
+}
+
+/* ========================================
+   Service Intro Section (サービス紹介)
+   ======================================== */
+.service-intro {
+  position: relative;
+  padding: 100px 0 120px;
+  background: var(--white);
+  overflow: hidden;
+}
+
+.service-intro__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Service Intro Header */
+.service-intro__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.service-intro__icon {
+  color: var(--primary-color);
+  margin-bottom: 16px;
+}
+
+.service-intro__title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
+
+.service-intro__title-en {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-light);
+  letter-spacing: 0.15em;
+}
+
+/* Service Intro Grid */
+.service-intro__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* Service Intro Card */
+.service-intro-card {
+  display: block;
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 0;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+}
+
+.service-intro-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-color);
+}
+
+.service-intro-card__image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.service-intro-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.service-intro-card:hover .service-intro-card__image img {
+  transform: scale(1.05);
+}
+
+.service-intro-card__title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  padding: 24px 24px 12px;
+  text-align: center;
+}
+
+.service-intro-card__text {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  padding: 0 24px 28px;
+  text-align: left;
+}
+
+/* Service Intro Responsive - Tablet */
+@media (max-width: 1023px) {
+  .service-intro {
+    padding: 80px 0 100px;
+  }
+
+  .service-intro__inner {
+    padding: 0 24px;
+  }
+
+  .service-intro__header {
+    margin-bottom: 40px;
+  }
+
+  .service-intro__title {
+    font-size: 28px;
+  }
+
+  .service-intro__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .service-intro-card__title {
+    font-size: 18px;
+  }
+}
+
+/* Service Intro Responsive - Mobile */
+@media (max-width: 767px) {
+  .service-intro {
+    padding: 60px 0 80px;
+  }
+
+  .service-intro__inner {
+    padding: 0 20px;
+  }
+
+  .service-intro__header {
+    margin-bottom: 40px;
+  }
+
+  .service-intro__title {
+    font-size: 26px;
+  }
+
+  .service-intro__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .service-intro-card__title {
+    font-size: 18px;
+    padding: 20px 20px 10px;
+    text-align: left;
+  }
+
+  .service-intro-card__text {
+    font-size: 13px;
+    padding: 0 20px 24px;
+    text-align: left;
+  }
 }
 
 /* ========================================

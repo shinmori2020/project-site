@@ -3,14 +3,9 @@
    ======================================== */
 
 /* ========================================
-   Tablet (max-width: 1023px)
+   Desktop (max-width: 1400px) - Hamburger menu switch
    ======================================== */
-@media (max-width: 1023px) {
-  :root {
-    --container-padding: 24px;
-    --header-height: 70px;
-  }
-
+@media (max-width: 1400px) {
   .pc-only {
     display: none !important;
   }
@@ -19,10 +14,20 @@
     display: block !important;
   }
 
-  /* Header - Always visible on tablet/mobile */
+  /* Header - Always visible */
   .header {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+/* ========================================
+   Tablet (max-width: 1023px)
+   ======================================== */
+@media (max-width: 1023px) {
+  :root {
+    --container-padding: 24px;
+    --header-height: 70px;
   }
 
   .section {
