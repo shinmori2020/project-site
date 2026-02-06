@@ -199,69 +199,6 @@
 }
 
 /* ========================================
-   Page CTA (shared style from about page)
-   ======================================== */
-.page-cta {
-  padding: 80px 0;
-  background: var(--primary-color);
-  text-align: center;
-}
-
-.page-cta__inner {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 40px;
-}
-
-.page-cta__title {
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--white);
-  margin-bottom: 16px;
-}
-
-.page-cta__text {
-  font-size: 16px;
-  color: var(--white);
-  opacity: 0.9;
-  margin-bottom: 32px;
-}
-
-.page-cta__buttons {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.page-cta .btn--primary {
-  background: var(--white);
-  color: var(--primary-color);
-}
-
-.page-cta .btn--primary:hover {
-  background: var(--bg-secondary);
-}
-
-.page-cta .btn--outline {
-  background: transparent;
-  color: var(--white);
-  border: 2px solid var(--white);
-}
-
-.page-cta .btn--outline:hover {
-  background: var(--white);
-  color: var(--primary-color);
-}
-
-.page-cta .btn--lg {
-  padding: 16px 32px;
-  font-size: 16px;
-  justify-content: center;
-  min-width: 240px;
-}
-
-/* ========================================
    Responsive - Tablet (max-width: 1023px)
    ======================================== */
 @media (max-width: 1023px) {
@@ -290,18 +227,6 @@
   .case-card__summary {
     font-size: 13px;
     -webkit-line-clamp: 2;
-  }
-
-  .page-cta {
-    padding: 60px 0;
-  }
-
-  .page-cta__inner {
-    padding: 0 24px;
-  }
-
-  .page-cta__title {
-    font-size: 24px;
   }
 }
 
@@ -354,32 +279,5 @@
     min-width: 36px;
     height: 36px;
     font-size: 13px;
-  }
-
-  .page-cta {
-    padding: 48px 0;
-  }
-
-  .page-cta__inner {
-    padding: 0 20px;
-  }
-
-  .page-cta__title {
-    font-size: 22px;
-  }
-
-  .page-cta__text {
-    font-size: 15px;
-    margin-bottom: 24px;
-  }
-
-  .page-cta__buttons {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .page-cta .btn--lg {
-    width: 100%;
-    min-width: auto;
   }
 }
