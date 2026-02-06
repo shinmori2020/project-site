@@ -124,7 +124,7 @@
 .footer__cta-btn {
   display: inline-flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 8px;
   padding: 14px 28px;
   font-size: 14px;

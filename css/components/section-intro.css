@@ -106,13 +106,13 @@
   }
 
   .section-intro__tag-box-inner {
-    margin: 0 16px;
-    padding: 0 16px 24px;
+    margin: 0;
+    padding: 0 24px 24px;
   }
 
   .section-intro__tag-title {
-    margin: 0 16px;
     padding-left: 24px;
+    padding-right: 24px;
     font-size: 18px;
   }
 }
