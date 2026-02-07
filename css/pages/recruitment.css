@@ -39,6 +39,22 @@
   object-position: center;
 }
 
+.recruit-hero__bg-placeholder {
+  width: 100%;
+  height: 100%;
+  background: var(--bg-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: var(--text-light);
+}
+
+.recruit-hero__bg-placeholder span {
+  font-size: 16px;
+}
+
 .recruit-hero__content {
   position: relative;
   z-index: 2;
@@ -503,8 +519,8 @@
 
   .recruit-hero {
     height: auto;
-    min-height: auto;
-    aspect-ratio: 16 / 9;
+    min-height: 600px;
+    aspect-ratio: 4 / 3;
   }
 
   .recruit-hero__content {
@@ -611,5 +627,872 @@
 
   .recruit-contact__form-area {
     padding: 20px;
+  }
+}
+
+/* ========================================
+   Features Section - 特徴4カード（シンプルアイコン形式）
+   ======================================== */
+.recruit-features {
+  padding: 60px 0 80px;
+  background: var(--white);
+}
+
+.recruit-features__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.recruit-features__box {
+  border: 2px dashed var(--border-color);
+  border-radius: 12px;
+  padding: 40px 48px 48px;
+}
+
+.recruit-features__lead {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--primary-color);
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.recruit-features__lead::before {
+  content: '＼';
+  margin-right: 12px;
+  color: var(--text-light);
+}
+
+.recruit-features__lead::after {
+  content: '／';
+  margin-left: 12px;
+  color: var(--text-light);
+}
+
+.recruit-features__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.recruit-features__card {
+  text-align: center;
+}
+
+.recruit-features__card-icon {
+  margin-bottom: 20px;
+}
+
+.recruit-features__card-icon-placeholder {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+}
+
+.recruit-features__card-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary-color);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.recruit-features__card-text {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  text-align: left;
+}
+
+/* ========================================
+   Recommend Section - こんな方にオススメ
+   ======================================== */
+.recruit-recommend {
+  padding: 80px 0;
+  background: var(--white);
+}
+
+.recruit-recommend__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.recruit-recommend__header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.recruit-recommend__title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-light);
+  margin-bottom: 8px;
+}
+
+.recruit-recommend__title-en {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--primary-color);
+  letter-spacing: 0.15em;
+  position: relative;
+  display: inline-block;
+}
+
+.recruit-recommend__title-en::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), #ff69b4);
+  border-radius: 2px;
+}
+
+.recruit-recommend__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.recruit-recommend__item {
+  text-align: center;
+}
+
+.recruit-recommend__item-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  color: var(--text-light);
+}
+
+.recruit-recommend__item-text {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.7;
+}
+
+/* ========================================
+   Workstyle Section - 働き方4つの充実
+   ======================================== */
+.recruit-workstyle {
+  padding: 80px 0;
+  background: var(--primary-light);
+}
+
+.recruit-workstyle__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.recruit-workstyle__header {
+  text-align: center;
+  margin-bottom: 48px;
+  color: var(--text-primary);
+}
+
+.recruit-workstyle__lead {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.recruit-workstyle__lead-num {
+  font-size: 40px;
+  color: var(--primary-color);
+  margin: 0 4px;
+}
+
+.recruit-workstyle__sub {
+  font-size: 16px;
+  position: relative;
+  display: inline-block;
+}
+
+.recruit-workstyle__sub::before {
+  content: '＼';
+  margin-right: 8px;
+}
+
+.recruit-workstyle__sub::after {
+  content: '／';
+  margin-left: 8px;
+}
+
+.recruit-workstyle__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.recruit-workstyle__card {
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.recruit-workstyle__card-image {
+  position: relative;
+  aspect-ratio: 16/9;
+  background: var(--bg-secondary);
+}
+
+.recruit-workstyle__card-image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  color: var(--text-light);
+  background: var(--bg-secondary);
+}
+
+.recruit-workstyle__card-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 8px 16px;
+  border-radius: 0 8px 0 0;
+}
+
+.recruit-workstyle__card-num {
+  font-size: 18px;
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+.recruit-workstyle__card-cat {
+  font-size: 14px;
+  border-left: 1px solid rgba(255,255,255,0.5);
+  padding-left: 8px;
+}
+
+.recruit-workstyle__card-body {
+  padding: 24px;
+}
+
+.recruit-workstyle__card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.recruit-workstyle__card-text {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* ========================================
+   Service Section - サービスの特徴
+   ======================================== */
+.recruit-service {
+  padding: 80px 0;
+  background: var(--white);
+}
+
+.recruit-service__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.recruit-service__header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.recruit-service__title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-light);
+  margin-bottom: 8px;
+}
+
+.recruit-service__title-en {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--primary-color);
+  letter-spacing: 0.15em;
+  position: relative;
+  display: inline-block;
+}
+
+.recruit-service__title-en::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background: var(--primary-color);
+  border-radius: 2px;
+}
+
+.recruit-service__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px 40px;
+}
+
+.recruit-service__card {
+  display: flex;
+  flex-direction: column;
+}
+
+.recruit-service__card-image {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.recruit-service__card-image-placeholder {
+  width: 100%;
+  aspect-ratio: 16/10;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+}
+
+/* ギザギザバッジ（花形・円形寄り） */
+.recruit-service__card-badge {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 110px;
+  height: 110px;
+  background: var(--primary-color);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+  /* 細かいギザギザ効果（16ポイント） */
+  clip-path: polygon(
+    50% 0%, 56% 6%, 65% 3%, 69% 10%, 78% 10%, 80% 18%,
+    88% 22%, 88% 30%, 94% 37%, 91% 44%, 97% 50%, 91% 56%,
+    94% 63%, 88% 70%, 88% 78%, 80% 82%, 78% 90%, 69% 90%,
+    65% 97%, 56% 94%, 50% 100%, 44% 94%, 35% 97%, 31% 90%,
+    22% 90%, 20% 82%, 12% 78%, 12% 70%, 6% 63%, 9% 56%,
+    3% 50%, 9% 44%, 6% 37%, 12% 30%, 12% 22%, 20% 18%,
+    22% 10%, 31% 10%, 35% 3%, 44% 6%
+  );
+}
+
+.recruit-service__card-badge-label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+}
+
+.recruit-service__card-badge-cat {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-top: 2px;
+}
+
+.recruit-service__card-body {
+  flex: 1;
+}
+
+.recruit-service__card-label {
+  font-size: 14px;
+  color: var(--primary-color);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.recruit-service__card-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.recruit-service__card-highlight {
+  color: var(--primary-color);
+}
+
+.recruit-service__card-text {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+/* ========================================
+   Satisfaction Section - 満足度
+   ======================================== */
+.recruit-satisfaction {
+  padding: 80px 0;
+  background: var(--white);
+}
+
+.recruit-satisfaction__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 40px;
+  text-align: center;
+}
+
+.recruit-satisfaction__title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  position: relative;
+  display: inline-block;
+}
+
+.recruit-satisfaction__title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ffeb3b, #ff9800);
+  border-radius: 2px;
+}
+
+.recruit-satisfaction__lead {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 48px;
+}
+
+.recruit-satisfaction__content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  background: var(--primary-light);
+  border-radius: 16px;
+  padding: 40px;
+}
+
+.recruit-satisfaction__text {
+  flex: 1;
+  text-align: left;
+}
+
+.recruit-satisfaction__percent {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.recruit-satisfaction__percent-num {
+  font-size: 48px;
+  color: var(--primary-color);
+  background: linear-gradient(90deg, #1976d2, #4fc3f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.recruit-satisfaction__percent-unit {
+  font-size: 32px;
+  color: var(--primary-color);
+  background: linear-gradient(90deg, #1976d2, #4fc3f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.recruit-satisfaction__desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.recruit-satisfaction__graph {
+  flex-shrink: 0;
+}
+
+.recruit-satisfaction__graph-circle {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: conic-gradient(var(--primary-color) 0% 90%, #e0e0e0 90% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.recruit-satisfaction__graph-circle::before {
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: var(--white);
+  border-radius: 50%;
+}
+
+.recruit-satisfaction__graph-num {
+  position: relative;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.recruit-satisfaction__graph-note {
+  font-size: 12px;
+  color: var(--text-light);
+  margin-top: 12px;
+}
+
+/* ========================================
+   Support Section - サポート体制
+   ======================================== */
+.recruit-support {
+  padding: 80px 0;
+  background: linear-gradient(180deg, rgba(79, 195, 247, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.recruit-support__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 40px;
+  text-align: center;
+}
+
+.recruit-support__title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+}
+
+.recruit-support__lead {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 48px;
+}
+
+.recruit-support__diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.recruit-support__diagram-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-primary);
+  border: 2px solid #e0e0e0;
+  background: var(--white);
+}
+
+.recruit-support__diagram-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.recruit-support__diagram-center {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff69b4, #4fc3f7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+}
+
+/* ========================================
+   Support Detail Section - サポート詳細
+   ======================================== */
+.recruit-support-detail {
+  padding: 60px 0 80px;
+  background: var(--white);
+}
+
+.recruit-support-detail__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.recruit-support-detail__card {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  padding: 32px;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+}
+
+.recruit-support-detail__card-image {
+  flex-shrink: 0;
+  width: 240px;
+}
+
+.recruit-support-detail__card-image-placeholder {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: var(--white);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+}
+
+.recruit-support-detail__card-body {
+  flex: 1;
+}
+
+.recruit-support-detail__card-label {
+  font-size: 14px;
+  color: #e91e63;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.recruit-support-detail__card-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #e91e63;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.recruit-support-detail__card-text {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+/* ========================================
+   Responsive - 追加セクション
+   ======================================== */
+@media (max-width: 768px) {
+  .recruit-features__inner {
+    padding: 0 20px;
+  }
+
+  .recruit-features__box {
+    padding: 32px 24px 40px;
+  }
+
+  .recruit-features__lead {
+    font-size: 18px;
+    margin-bottom: 32px;
+  }
+
+  .recruit-features__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 16px;
+  }
+
+  .recruit-features__card-icon-placeholder {
+    width: 80px;
+    height: 80px;
+  }
+
+  .recruit-features__card-icon-placeholder svg {
+    width: 60px;
+    height: 60px;
+  }
+
+  .recruit-features__card-title {
+    font-size: 14px;
+  }
+
+  .recruit-features__card-text {
+    font-size: 13px;
+  }
+
+  .recruit-recommend__inner {
+    padding: 0 20px;
+  }
+
+  .recruit-recommend__title {
+    font-size: 26px;
+  }
+
+  .recruit-recommend__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .recruit-workstyle__inner {
+    padding: 0 20px;
+  }
+
+  .recruit-workstyle__lead {
+    font-size: 22px;
+  }
+
+  .recruit-workstyle__lead-num {
+    font-size: 32px;
+  }
+
+  .recruit-workstyle__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .recruit-service__inner {
+    padding: 0 20px;
+  }
+
+  .recruit-service__title {
+    font-size: 26px;
+  }
+
+  .recruit-service__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .recruit-service__card-badge {
+    width: 80px;
+    height: 80px;
+    top: -10px;
+    left: -10px;
+  }
+
+  .recruit-service__card-badge-label {
+    font-size: 9px;
+  }
+
+  .recruit-service__card-badge-cat {
+    font-size: 12px;
+  }
+
+  .recruit-service__card-title {
+    font-size: 18px;
+  }
+
+  .recruit-satisfaction__inner {
+    padding: 0 20px;
+  }
+
+  .recruit-satisfaction__title {
+    font-size: 22px;
+  }
+
+  .recruit-satisfaction__content {
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px 24px;
+  }
+
+  .recruit-satisfaction__text {
+    text-align: center;
+  }
+
+  .recruit-support__inner {
+    padding: 0 20px;
+  }
+
+  .recruit-support__title {
+    font-size: 22px;
+  }
+
+  .recruit-support__diagram-row {
+    flex-direction: column;
+  }
+
+  .recruit-support-detail__inner {
+    padding: 0 20px;
+  }
+
+  .recruit-support-detail__card {
+    flex-direction: column;
+    padding: 24px;
+  }
+
+  .recruit-support-detail__card-image {
+    width: 100%;
+  }
+
+  .recruit-support-detail__card-title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .recruit-hero {
+    min-height: 500px;
+  }
+
+  .recruit-features__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .recruit-features__card-text {
+    text-align: center;
+  }
+
+  .recruit-recommend__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .recruit-satisfaction__percent-num {
+    font-size: 36px;
+  }
+
+  .recruit-satisfaction__graph-circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .recruit-satisfaction__graph-circle::before {
+    width: 90px;
+    height: 90px;
+  }
+
+  .recruit-satisfaction__graph-num {
+    font-size: 28px;
   }
 }
