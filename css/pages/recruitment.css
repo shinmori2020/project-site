@@ -310,11 +310,7 @@
 
 .recruit-flow__box .recruit-flow__step {
   flex: 1;
-  max-width: 200px;
-  background: var(--white);
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 24px 16px;
+  max-width: 240px;
 }
 
 .recruit-flow__arrow {
@@ -337,8 +333,8 @@
   }
 
   .recruit-flow__box .recruit-flow__step {
-    max-width: calc(50% - 30px);
-    flex: 0 0 calc(50% - 30px);
+    max-width: calc(50% - 20px);
+    flex: 0 0 calc(50% - 20px);
   }
 
   .recruit-flow__arrow {
