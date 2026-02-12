@@ -150,16 +150,30 @@
 }
 
 .recruit-about__images {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  position: relative;
+  padding-bottom: 80px;
+  padding-left: 60px;
 }
 
 .recruit-about__image {
-  width: 100%;
+  width: 75%;
   aspect-ratio: 4/3;
   object-fit: cover;
   border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.recruit-about__image:first-child {
+  position: relative;
+  z-index: 1;
+  margin-left: auto;
+}
+
+.recruit-about__image:last-child {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
 }
 
 .recruit-about__image-placeholder span {
