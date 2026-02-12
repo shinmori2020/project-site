@@ -149,6 +149,19 @@
   border-radius: 8px;
 }
 
+.recruit-about__images {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.recruit-about__image {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
 .recruit-about__image-placeholder span {
   font-size: 14px;
 }
